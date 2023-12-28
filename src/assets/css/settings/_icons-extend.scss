@@ -1,16 +1,32 @@
 
-  %icon-pdf-file {
+  %icon-download {
   content: "\f101";
+  }
+
+  .icon-download:before {
+  content: "\f101";
+  }
+
+  %icon-pdf-file {
+  content: "\f102";
   }
 
   .icon-pdf-file:before {
-  content: "\f101";
+  content: "\f102";
+  }
+
+  %icon-pdfile {
+  content: "\f103";
+  }
+
+  .icon-pdfile:before {
+  content: "\f103";
   }
 
   %icon-txt-file {
-  content: "\f102";
+  content: "\f104";
   }
 
   .icon-txt-file:before {
-  content: "\f102";
+  content: "\f104";
   }

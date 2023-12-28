@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <h1>
-        Hello <i className='icon icon-pdf-file'></i>{' '}
+        Hello <i className='icon icon-pdf-file'></i>
       </h1>
     </>
   );
