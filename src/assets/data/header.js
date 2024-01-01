@@ -1,31 +1,33 @@
-import logo from '../../../public/images/logo.png';
+import logo from '/images/logo.png';
 
 export const headerItems = {
   logo: logo,
-  nav: [
+  navItems: [
     {
       title: 'Home',
-      link: '/',
+      link: '/be-pay-demo/',
     },
     {
       title: 'About',
-      link: '/',
+      link: '/be-pay-demo/about',
     },
     {
       title: 'Features',
-      link: '/',
+      link: '/be-pay-demo/features',
     },
     {
       title: 'Pricing List',
-      link: '/',
+      link: '/be-pay-demo/pricing',
     },
     {
       title: 'Contact',
-      link: '/',
+      link: '/be-pay-demo/contact',
     },
   ],
   btn: {
     text: 'Buy Now',
-    link: '/',
+    link: '/be-pay-demo/buy',
   },
 };
+
+// export default headerItems;
