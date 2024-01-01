@@ -4,7 +4,15 @@ import {
   createHashRouter,
 } from 'react-router-dom';
 import './assets/css/styles.scss';
-import { About, Home, Layout, NotFoundPage } from './pages';
+import {
+  About,
+  Contact,
+  Features,
+  Home,
+  Layout,
+  NotFoundPage,
+  Pricing,
+} from './pages';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +27,21 @@ const router = createBrowserRouter([
       {
         path: '/be-pay-demo/about',
         element: <About />,
+        errorElement: <NotFoundPage />,
+      },
+      {
+        path: '/be-pay-demo/features',
+        element: <Features />,
+        errorElement: <NotFoundPage />,
+      },
+      {
+        path: '/be-pay-demo/pricing',
+        element: <Pricing />,
+        errorElement: <NotFoundPage />,
+      },
+      {
+        path: '/be-pay-demo/contact',
+        element: <Contact />,
         errorElement: <NotFoundPage />,
       },
     ],
