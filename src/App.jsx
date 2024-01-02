@@ -18,31 +18,27 @@ const router = createBrowserRouter([
   {
     path: '/be-pay-demo/',
     element: <Layout />,
+    errorElement: <NotFoundPage />,
     children: [
       {
         index: true,
         element: <Home />,
-        errorElement: <NotFoundPage />,
       },
       {
         path: '/be-pay-demo/about',
         element: <About />,
-        errorElement: <NotFoundPage />,
       },
       {
         path: '/be-pay-demo/features',
         element: <Features />,
-        errorElement: <NotFoundPage />,
       },
       {
         path: '/be-pay-demo/pricing',
         element: <Pricing />,
-        errorElement: <NotFoundPage />,
       },
       {
         path: '/be-pay-demo/contact',
         element: <Contact />,
-        errorElement: <NotFoundPage />,
       },
     ],
   },
