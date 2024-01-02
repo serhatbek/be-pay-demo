@@ -5,7 +5,6 @@ import { nanoid } from 'nanoid';
 import { Button, Icon } from '../../components';
 import { useState } from 'react';
 import classNames from 'classnames';
-import { CSSTransition } from 'react-transition-group';
 
 const Header = () => {
   const [menuStatus, setMenuStatus] = useState(false);
@@ -27,7 +26,6 @@ const Header = () => {
         </figure>
 
         <Icon size='32' icon='menu-open' onClick={handleMenuOpen} />
-        {/* <CSSTransition></CSSTransition> */}
         <nav className={classNames(`${menuStatus === true ? 'visible' : ''}`)}>
           <Icon size='32' icon='menu-close' onClick={handleMenuClose} />
           <ul>
