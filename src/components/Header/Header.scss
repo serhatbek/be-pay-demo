@@ -3,6 +3,7 @@
 .header {
   $self: &;
   background-color: c.$dark-one;
+  position: relative;
 
   .container {
     display: flex;
@@ -15,12 +16,57 @@
       max-width: 182px;
     }
 
+    .icon-menu-close,
+    .icon-menu-open {
+      color: c.$light-one;
+      display: none;
+      cursor: pointer;
+
+      @include c.media(tablet-wide) {
+        display: block;
+      }
+    }
+
+    .icon-menu-close {
+      color: c.$light-six;
+      margin-bottom: 20px;
+      align-self: end;
+    }
+
     nav {
       display: flex;
       align-items: center;
 
+      @include c.media(tablet-wide) {
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        max-width: 250px;
+        width: 100%;
+        padding: 16px;
+        background-color: c.$brown-one;
+
+        .bg-overlay {
+          position: fixed;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.6);
+          width: 100%;
+          z-index: -1;
+        }
+      }
+
       ul {
         display: flex;
+
+        @include c.media(tablet-wide) {
+          flex-direction: column;
+          order: 2;
+          width: 100%;
+        }
 
         li {
           a {
@@ -31,6 +77,15 @@
             font-size: 14px;
             font-weight: 600;
             position: relative;
+
+            @include c.media(tablet-wide) {
+              color: c.$light-five;
+
+              &.active,
+              &:hover {
+                color: c.$light-one;
+              }
+            }
           }
 
           a::after {
@@ -49,7 +104,23 @@
 
           a.active::after {
             opacity: 1;
+
+            @include c.media(tablet-wide) {
+              opacity: 0;
+            }
           }
+
+          @include c.media(tablet-wide) {
+            border-bottom: 1px solid rgba($color: c.$light-six, $alpha: 0.3);
+          }
+        }
+      }
+
+      #{$self}__action {
+        @include c.media(tablet-wide) {
+          order: 1;
+          width: 100%;
+          margin-bottom: 22px;
         }
       }
     }

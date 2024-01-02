@@ -2,7 +2,7 @@ import './Header.scss';
 import { NavLink } from 'react-router-dom';
 import { headerItems } from '../../assets/data/header';
 import { nanoid } from 'nanoid';
-import { Button } from '../../components';
+import { Button, Icon } from '../../components';
 
 const Header = () => {
   const { logo, navItems, btn } = headerItems;
@@ -13,7 +13,9 @@ const Header = () => {
           <img src={logo} alt='logo' />
         </figure>
 
+        <Icon size='32' icon='menu-open' />
         <nav>
+          <Icon size='32' icon='menu-close' />
           <ul>
             {navItems?.map((item) => {
               return (
@@ -29,7 +31,10 @@ const Header = () => {
               );
             })}
           </ul>
-          <Button iconRight='cart'>{btn.text}</Button>
+          <Button className='header__action' iconRight='cart'>
+            {btn.text}
+          </Button>
+          <div className='bg-overlay'></div>
         </nav>
       </div>
     </header>
