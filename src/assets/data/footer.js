@@ -4,9 +4,10 @@ export const footerItems = {
     text: 'Muffin group',
   },
   wordpress: {
-    url: 'WordPress',
-    text: 'https://wordpress.org/',
+    url: 'https://wordpress.org/',
+    text: 'WordPress',
   },
+
   navItems: [
     {
       title: 'Home',

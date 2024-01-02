@@ -43,7 +43,7 @@ const Header = () => {
               );
             })}
           </ul>
-          <Button className='header__action' iconRight='cart'>
+          <Button className='ant-btn--blue header__action' iconRight='cart'>
             {btn.text}
           </Button>
           <div className='bg-overlay'></div>
