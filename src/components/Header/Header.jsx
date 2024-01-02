@@ -1,7 +1,8 @@
+import './Header.scss';
 import { NavLink } from 'react-router-dom';
 import { headerItems } from '../../assets/data/header';
 import { nanoid } from 'nanoid';
-import './Header.scss';
+import { Button } from '../../components';
 
 const Header = () => {
   const { logo, navItems, btn } = headerItems;
@@ -28,9 +29,9 @@ const Header = () => {
               );
             })}
           </ul>
+          <Button iconRight='cart'>{btn.text}</Button>
         </nav>
       </div>
-      <button>{btn.text}</button>
     </header>
   );
 };

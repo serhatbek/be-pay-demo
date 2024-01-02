@@ -8,12 +8,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
 
     #{ $self }__logo {
       max-width: 182px;
     }
 
     nav {
+      display: flex;
+      align-items: center;
+
       ul {
         display: flex;
 
