@@ -122,7 +122,9 @@
       }
 
       #{$self}__action {
+        margin-left: 50px;
         @include c.media(tablet-wide) {
+          margin-left: 0;
           order: 1;
           width: 100%;
           margin-bottom: 22px;

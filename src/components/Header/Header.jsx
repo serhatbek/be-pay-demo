@@ -34,7 +34,7 @@ const Header = () => {
                 <li key={nanoid()}>
                   <NavLink
                     className={({ isActive }) => (isActive ? 'active' : '')}
-                    to={item.link}
+                    to={item?.link}
                     end
                   >
                     {item.title}
