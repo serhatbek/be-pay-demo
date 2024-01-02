@@ -1,0 +1,52 @@
+@use '../../assets/css/common.scss' as c;
+
+.header {
+  $self: &;
+  background-color: c.$dark-one;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    #{ $self }__logo {
+      max-width: 182px;
+    }
+
+    nav {
+      ul {
+        display: flex;
+
+        li {
+          a {
+            display: inline-block;
+            width: 100%;
+            padding: 15px 20px;
+            color: c.$light-one;
+            font-size: 14px;
+            font-weight: 600;
+            position: relative;
+          }
+
+          a::after {
+            content: '';
+            display: block;
+            width: 80%;
+            height: 2px;
+            background-color: c.$yellow-one;
+            position: absolute;
+            left: 50%;
+            bottom: 0px;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: ease-in-out;
+          }
+
+          a.active::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
