@@ -21,7 +21,6 @@
       color: c.$light-one;
       display: none;
       cursor: pointer;
-
       @include c.media(tablet-wide) {
         display: block;
       }
@@ -38,30 +37,37 @@
       align-items: center;
 
       &.visible {
-        display: flex;
+        right: 0;
+        transition: all 0.4s ease-in-out;
+      }
+
+      .bg-overlay {
+        position: fixed;
+        right: -2000px;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        z-index: -1;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &.visible .bg-overlay {
+        opacity: 1;
+        right: 0;
       }
 
       @include c.media(tablet-wide) {
         flex-direction: column;
         position: fixed;
-        right: 0;
+        right: -2000px;
         top: 0;
         bottom: 0;
         max-width: 250px;
         width: 100%;
         padding: 16px;
         background-color: c.$brown-one;
-        display: none;
-
-        .bg-overlay {
-          position: fixed;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          background-color: rgba(0, 0, 0, 0.6);
-          width: 100%;
-          z-index: -1;
-        }
       }
 
       ul {
