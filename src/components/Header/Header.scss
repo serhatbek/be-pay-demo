@@ -37,6 +37,10 @@
       display: flex;
       align-items: center;
 
+      &.visible {
+        display: flex;
+      }
+
       @include c.media(tablet-wide) {
         flex-direction: column;
         position: fixed;
@@ -47,6 +51,7 @@
         width: 100%;
         padding: 16px;
         background-color: c.$brown-one;
+        display: none;
 
         .bg-overlay {
           position: fixed;

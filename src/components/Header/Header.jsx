@@ -3,9 +3,21 @@ import { NavLink } from 'react-router-dom';
 import { headerItems } from '../../assets/data/header';
 import { nanoid } from 'nanoid';
 import { Button, Icon } from '../../components';
+import { useState } from 'react';
+import classNames from 'classnames';
 
 const Header = () => {
+  const [menuStatus, setMenuStatus] = useState(false);
   const { logo, navItems, btn } = headerItems;
+
+  const handleMenuOpen = () => {
+    setMenuStatus(true);
+  };
+
+  const handleMenuClose = () => {
+    setMenuStatus(false);
+  };
+
   return (
     <header className='header'>
       <div className='container'>
@@ -13,9 +25,9 @@ const Header = () => {
           <img src={logo} alt='logo' />
         </figure>
 
-        <Icon size='32' icon='menu-open' />
-        <nav>
-          <Icon size='32' icon='menu-close' />
+        <Icon size='32' icon='menu-open' onClick={handleMenuOpen} />
+        <nav className={classNames(`${menuStatus === true ? 'visible' : ''}`)}>
+          <Icon size='32' icon='menu-close' onClick={handleMenuClose} />
           <ul>
             {navItems?.map((item) => {
               return (
