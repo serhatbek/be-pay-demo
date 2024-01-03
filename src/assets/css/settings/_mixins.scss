@@ -10,7 +10,7 @@ $ver: unique_id();
       @content;
     }
   } @else if $point == tablet {
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
       @content;
     }
   } @else if $point == tablet-wide {

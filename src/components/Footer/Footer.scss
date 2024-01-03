@@ -4,6 +4,11 @@
   $self: &;
   background-color: c.$dark-four;
   padding: 30px 0;
+  position: relative;
+
+  @include c.media(tablet-wide) {
+    padding-top: 50px;
+  }
 
   .container {
     display: flex;
@@ -11,9 +16,20 @@
     justify-content: space-between;
     color: c.$light-one;
 
+    @include c.media(tablet-wide) {
+      flex-direction: column;
+    }
+
     #{$self}__copyright {
       display: flex;
       font-size: 15px;
+
+      @include c.media(tablet-wide) {
+        font-size: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+      }
 
       > span {
         margin: 0 10px;
@@ -45,6 +61,11 @@
       align-items: center;
       ul {
         display: flex;
+        @include c.media(tablet-wide) {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
         li {
           a {
             font-size: 15px;
@@ -55,6 +76,10 @@
             &:hover {
               color: c.$yellow-one;
               text-decoration: underline;
+            }
+
+            @include c.media(tablet-wide) {
+              font-size: 13px;
             }
           }
 
@@ -71,6 +96,13 @@
 
         &:hover {
           color: c.$light-four;
+        }
+
+        @include c.media(tablet-wide) {
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, 0);
+          top: 10px;
         }
       }
     }
