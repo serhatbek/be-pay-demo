@@ -2,8 +2,9 @@
 
 .header {
   $self: &;
-  background-color: c.$dark-one;
-  position: relative;
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
 
   .container {
     display: flex;

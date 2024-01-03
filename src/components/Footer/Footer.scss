@@ -4,7 +4,6 @@
   $self: &;
   background-color: c.$dark-four;
   padding: 30px 0;
-  position: relative;
 
   @include c.media(tablet-wide) {
     padding-top: 50px;
@@ -59,11 +58,15 @@
     #{$self}__menu {
       display: flex;
       align-items: center;
+      @include c.media(tablet-wide) {
+        flex-direction: column;
+      }
       ul {
         display: flex;
         @include c.media(tablet-wide) {
           flex-wrap: wrap;
           justify-content: center;
+          margin-bottom: 10px;
         }
 
         li {
@@ -96,13 +99,6 @@
 
         &:hover {
           color: c.$light-four;
-        }
-
-        @include c.media(tablet-wide) {
-          position: absolute;
-          left: 50%;
-          transform: translate(-50%, 0);
-          top: 10px;
         }
       }
     }

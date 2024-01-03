@@ -12,12 +12,37 @@
   padding: 10px 20px;
   height: 41px;
   transition: all 0.3s ease-in-out;
+  border: none;
+  border-radius: 5px;
+  outline: transparent;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.03),
+    inset 0px 4px 3px -2px rgba(0, 0, 0, 0.07);
+  position: static;
 
   &--blue {
     background-color: c.$blue-one;
 
     &:hover {
-      background-color: c.$blue-two;
+      background-color: c.$blue-two !important;
+      color: c.$light-one !important;
+    }
+  }
+
+  &--pink {
+    background-color: c.$pink-one;
+
+    &:hover {
+      background-color: c.$pink-two !important;
+      color: c.$light-one !important;
+    }
+  }
+
+  &--purple {
+    background-color: c.$purple-one;
+
+    &:hover {
+      background-color: c.$purple-two !important;
+      color: c.$light-one !important;
     }
   }
 
@@ -25,11 +50,19 @@
     > span {
       margin-left: 8px;
     }
+
+    .icon {
+      font-size: 18px;
+    }
   }
 
   &--right-icon {
     > span {
       margin-right: 8px;
+    }
+
+    > .icon {
+      font-size: 18px;
     }
   }
 }

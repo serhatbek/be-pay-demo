@@ -48,7 +48,7 @@ const Footer = () => {
             className='footer__menu__scroll-icon'
             icon='chevron-up-circle'
             onClick={scrollToTop}
-            size={32}
+            size='32'
           />
         </nav>
       </div>

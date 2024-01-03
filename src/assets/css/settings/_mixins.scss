@@ -1,12 +1,19 @@
 $ver: unique_id();
 
+// for one bg image
 @mixin imageCacheBust($url) {
   background-image: #{'url("'}#{$url}#{'?v='}#{$ver}#{'")'};
 }
 
+// for multiple bg images / need to be adjusted accordingly
+@mixin imageCacheBusts($url1, $url2) {
+  background-image: #{'url("'}#{$url1}#{'?v='}#{$ver}#{'")'},
+    #{'url("'}#{$url2}#{'?v='}#{$ver}#{'")'};
+}
+
 @mixin media($point) {
   @if $point == mobile {
-    @media (max-width: 480px) {
+    @media (max-width: 460px) {
       @content;
     }
   } @else if $point == tablet {

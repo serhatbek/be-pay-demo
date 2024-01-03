@@ -6,10 +6,10 @@ import { Icon } from '../../components';
 
 const Button = ({
   className,
-  type,
   iconLeft,
   iconRight,
   children,
+  url,
   ...props
 }) => {
   return (
@@ -18,7 +18,6 @@ const Button = ({
         'ant-btn--left-icon': iconLeft,
         'ant-btn--right-icon': iconRight,
       })}
-      type={type === 'submit' ? 'submit' : 'button'}
       {...props}
     >
       {iconLeft ? <Icon icon={iconLeft} /> : null}

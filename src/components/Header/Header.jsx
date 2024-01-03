@@ -21,9 +21,11 @@ const Header = () => {
   return (
     <header className='header'>
       <div className='container'>
-        <figure className='header__logo'>
-          <img src={logo} alt='logo' />
-        </figure>
+        <NavLink to='/be-pay-demo/'>
+          <figure className='header__logo'>
+            <img src={logo} alt='logo' />
+          </figure>
+        </NavLink>
 
         <Icon size='32' icon='menu-open' onClick={handleMenuOpen} />
         <nav className={classNames(`${menuStatus === true ? 'visible' : ''}`)}>
@@ -43,7 +45,12 @@ const Header = () => {
               );
             })}
           </ul>
-          <Button className='ant-btn--blue header__action' iconRight='cart'>
+          <Button
+            type='link'
+            href='/'
+            className='ant-btn--blue header__action'
+            iconRight='cart'
+          >
             {btn.text}
           </Button>
           <div className='bg-overlay'></div>
