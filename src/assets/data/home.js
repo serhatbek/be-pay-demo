@@ -1,3 +1,7 @@
+import user1 from '../../../public/images/Home/home_testimonial-1.png';
+import user2 from '../../../public/images/Home/home_testimonial-2.png';
+import user3 from '../../../public/images/Home/home_testimonial-3.png';
+
 export const homeItems = {
   ctaCard: {
     title: 'A few reasons why Be Pay might be the right fit',
@@ -46,19 +50,19 @@ export const homeItems = {
   ],
   testimonialItems: [
     {
-      img: '/assets/images/Home/home_testimonial-1.png',
+      img: user1,
       desc: 'Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie.',
       name: 'Jennifer Lee ',
       job: 'CEO Curabitur',
     },
     {
-      img: '/assets/images/Home/home_testimonial-2.png',
+      img: user2,
       desc: 'Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie.',
       name: 'Tom Johnson ',
       job: 'CEO Muffin Group',
     },
     {
-      img: '/assets/images/Home/home_testimonial-3.png',
+      img: user3,
       desc: 'Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie.',
       name: 'Kevin Perry ',
       job: 'CEO Nulla Purus ',

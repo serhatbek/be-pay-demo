@@ -1,5 +1,11 @@
+import { nanoid } from 'nanoid';
 import { homeItems } from '../../assets/data/home';
-import { ActionShowcaseCard, Button, InfoCard } from '../../components';
+import {
+  ActionShowcaseCard,
+  Button,
+  InfoCard,
+  TestimonialCard,
+} from '../../components';
 import './Home.scss';
 import payImg from '/images/Home/home_pay_section-img1.png';
 
@@ -53,6 +59,7 @@ const Home = () => {
             <div className='box'>
               {infoItems?.map((item) => (
                 <InfoCard
+                  key={nanoid()}
                   title={item.title}
                   text={item.text}
                   icon={item.icon}
@@ -63,6 +70,15 @@ const Home = () => {
           </div>
           <div className='section-testimonials__bottom'>
             <h2>Testimonials</h2>
+            {testimonialItems?.map((item) => (
+              <TestimonialCard
+                key={nanoid()}
+                image={item.img}
+                desc={item.desc}
+                name={item.name}
+                job={item.job}
+              />
+            ))}
           </div>
         </div>
       </section>

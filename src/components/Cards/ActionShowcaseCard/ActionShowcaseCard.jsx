@@ -1,16 +1,19 @@
 import Button from '../../Button/Button';
 import './ActionShowcaseCard.scss';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const ActionShowcaseCard = ({
   title,
   desc,
+  className,
   btnText,
   btnLink,
   btnIcon,
   btnClass,
 }) => {
   return (
-    <div className='cta-card'>
+    <div className={classNames('cta-card', className)}>
       <h3>{title}</h3>
       <p>{desc}</p>
       <Button
@@ -25,9 +28,10 @@ const ActionShowcaseCard = ({
   );
 };
 
-InfoCard.propTypes = {
+ActionShowcaseCard.propTypes = {
   title: PropTypes.string,
   desc: PropTypes.string,
+  className: PropTypes.string,
   btnText: PropTypes.string,
   btnLink: PropTypes.string,
   btnIcon: PropTypes.string,

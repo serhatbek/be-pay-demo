@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 
 const TestimonialCard = ({ image, desc, name, job, className }) => {
   return (
-    <div className={classNames('testimonial-card', className)}>
+    <blockquote className={classNames('testimonial-card', className)}>
       <figure>
         <img src={image} />
       </figure>
-      <p>{desc}</p>
-      <p>
+      <p className='testimonial-card__desc'>{desc}</p>
+      <p className='testimonial-card__name'>
         {name} <span>{job}</span>
       </p>
-    </div>
+    </blockquote>
   );
 };
 
