@@ -20,6 +20,7 @@ InfoCard.propTypes = {
   text: PropTypes.string,
   icon: PropTypes.string,
   iconSize: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default InfoCard;

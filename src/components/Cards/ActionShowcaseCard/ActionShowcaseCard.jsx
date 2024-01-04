@@ -25,4 +25,13 @@ const ActionShowcaseCard = ({
   );
 };
 
+InfoCard.propTypes = {
+  title: PropTypes.string,
+  desc: PropTypes.string,
+  btnText: PropTypes.string,
+  btnLink: PropTypes.string,
+  btnIcon: PropTypes.string,
+  btnClass: PropTypes.string,
+};
+
 export default ActionShowcaseCard;

@@ -4,7 +4,7 @@ import './Home.scss';
 import payImg from '/images/Home/home_pay_section-img1.png';
 
 const Home = () => {
-  const { infoItems, ctaCard } = homeItems;
+  const { infoItems, ctaCard, testimonialItems } = homeItems;
   return (
     <>
       <section className='section section-pay'>
