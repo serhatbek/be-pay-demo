@@ -56,3 +56,9 @@
     }
   }
 }
+
+.section-testimonials {
+  @include c.imageCacheBust('/images/Home/section_testimonialsbg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
