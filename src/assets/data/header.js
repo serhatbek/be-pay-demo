@@ -29,5 +29,3 @@ export const headerItems = {
     link: '/be-pay-demo/buy',
   },
 };
-
-// export default headerItems;

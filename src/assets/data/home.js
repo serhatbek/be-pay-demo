@@ -44,4 +44,24 @@ export const homeItems = {
       iconSize: '50',
     },
   ],
+  testimonialItems: [
+    {
+      img: '/assets/images/Home/home_testimonial-1.png',
+      desc: 'Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie.',
+      name: 'Jennifer Lee ',
+      job: 'CEO Curabitur',
+    },
+    {
+      img: '/assets/images/Home/home_testimonial-2.png',
+      desc: 'Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie.',
+      name: 'Tom Johnson ',
+      job: 'CEO Muffin Group',
+    },
+    {
+      img: '/assets/images/Home/home_testimonial-3.png',
+      desc: 'Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie.',
+      name: 'Kevin Perry ',
+      job: 'CEO Nulla Purus ',
+    },
+  ],
 };

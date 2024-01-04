@@ -61,6 +61,9 @@ const Home = () => {
               ))}
             </div>
           </div>
+          <div className='section-testimonials__bottom'>
+            <h2>Testimonials</h2>
+          </div>
         </div>
       </section>
     </>

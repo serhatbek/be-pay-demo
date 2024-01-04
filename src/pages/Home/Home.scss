@@ -68,6 +68,7 @@
     #{ $self }__top {
       display: flex;
       align-items: center;
+      margin-bottom: 100px;
       @include c.media(tablet-wide) {
         flex-direction: column;
       }
@@ -83,7 +84,6 @@
         width: 65%;
         display: flex;
         flex-wrap: wrap;
-        // padding-left: 80px;
         justify-content: flex-end;
         @include c.media(tablet-wide) {
           justify-content: flex-start;
@@ -97,6 +97,15 @@
             margin-bottom: 20px;
           }
         }
+      }
+    }
+
+    #{ $self }__bottom {
+      h2 {
+        text-align: center;
+        color: c.$light-one;
+        margin-bottom: 60px;
+        font-size: clamp(23px, calc(1.4375rem + ((1vw - 4.2px) * 0.875)), 30px);
       }
     }
   }
