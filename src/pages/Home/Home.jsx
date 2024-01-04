@@ -1,8 +1,10 @@
-import { Button, InfoCard } from '../../components';
+import { homeItems } from '../../assets/data/home';
+import { ActionShowcaseCard, Button, InfoCard } from '../../components';
 import './Home.scss';
 import payImg from '/images/Home/home_pay_section-img1.png';
 
 const Home = () => {
+  const { infoItems, ctaCard } = homeItems;
   return (
     <>
       <section className='section section-pay'>
@@ -38,8 +40,27 @@ const Home = () => {
       </section>
 
       <section className='section section-testimonials'>
-        <div className='section-testimonials__top'>
-          <InfoCard title='01 —' text='Admin panel' icon='web' iconSize='50' />
+        <div className='container'>
+          <div className='section-testimonials__top'>
+            <ActionShowcaseCard
+              title={ctaCard.title}
+              desc={ctaCard.desc}
+              btnText={ctaCard.btnText}
+              btnLink={ctaCard.btnLink}
+              btnIcon={ctaCard.btnIcon}
+              btnClass='ant-btn--purple'
+            />
+            <div className='box'>
+              {infoItems?.map((item) => (
+                <InfoCard
+                  title={item.title}
+                  text={item.text}
+                  icon={item.icon}
+                  iconSize={item.iconSize}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </>

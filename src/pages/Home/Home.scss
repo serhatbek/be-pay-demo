@@ -58,7 +58,22 @@
 }
 
 .section-testimonials {
+  $self: &;
   @include c.imageCacheBust('/images/Home/section_testimonialsbg.png');
   background-repeat: no-repeat;
   background-position: center;
+
+  .container {
+    #{ $self }__top {
+      display: flex;
+      .box {
+        display: flex;
+        flex-wrap: wrap;
+
+        > div:not(:last-child) {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
 }
