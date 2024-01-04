@@ -59,19 +59,43 @@
 
 .section-testimonials {
   $self: &;
-  @include c.imageCacheBust('/images/Home/section_testimonialsbg.png');
+  @include c.imageCacheBust('/images/Home/home_pay_sectionbg3.png');
   background-repeat: no-repeat;
   background-position: center;
+  padding: 50px 0;
 
   .container {
     #{ $self }__top {
       display: flex;
+      align-items: center;
+      @include c.media(tablet-wide) {
+        flex-direction: column;
+      }
+
+      .cta-card {
+        width: 35%;
+        @include c.media(tablet-wide) {
+          width: 80%;
+          margin-bottom: 40px;
+        }
+      }
       .box {
+        width: 65%;
         display: flex;
         flex-wrap: wrap;
+        // padding-left: 80px;
+        justify-content: flex-end;
+        @include c.media(tablet-wide) {
+          justify-content: flex-start;
+          width: 80%;
+        }
 
-        > div:not(:last-child) {
+        > div {
           margin-bottom: 40px;
+
+          @include c.media(tablet) {
+            margin-bottom: 20px;
+          }
         }
       }
     }

@@ -16,6 +16,9 @@
     line-height: 25px;
     font-weight: 400;
     margin: 0;
+    @include c.media(tablet) {
+      font-size: 13px;
+    }
   }
 
   p {
@@ -23,5 +26,8 @@
     font-size: 18px;
     line-height: 28px;
     font-weight: 700;
+    @include c.media(tablet) {
+      font-size: 15px;
+    }
   }
 }
