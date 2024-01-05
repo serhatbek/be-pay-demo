@@ -3,12 +3,14 @@ import { NavLink } from 'react-router-dom';
 import { headerItems } from '../../assets/data/header';
 import { nanoid } from 'nanoid';
 import { Button, Icon } from '../../components';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import classNames from 'classnames';
+import handleClickOutside from '../../utils/handleClickOutside';
 
 const Header = () => {
   const [menuStatus, setMenuStatus] = useState(false);
   const { logo, navItems, btn } = headerItems;
+  const menuRef = useRef(null);
 
   const handleMenuOpen = () => {
     setMenuStatus(true);
@@ -17,6 +19,8 @@ const Header = () => {
   const handleMenuClose = () => {
     setMenuStatus(false);
   };
+
+  handleClickOutside(menuRef, handleMenuClose);
 
   return (
     <header className='header'>
@@ -30,7 +34,7 @@ const Header = () => {
         <Icon size='32' icon='menu-open' onClick={handleMenuOpen} />
         <nav className={classNames(`${menuStatus === true ? 'visible' : ''}`)}>
           <Icon size='32' icon='menu-close' onClick={handleMenuClose} />
-          <ul>
+          <ul ref={menuRef}>
             {navItems?.map((item) => {
               return (
                 <li key={nanoid()}>
