@@ -1,6 +1,7 @@
 import './About.scss';
 import aboutItems from '../../assets/data/about';
 import { Button, SocialBanner } from '../../components';
+import { nanoid } from 'nanoid';
 
 const About = () => {
   const { socialBannerItem } = aboutItems;
