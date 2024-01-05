@@ -1,7 +1,14 @@
-import user1 from '../../../public/images/Home/home_testimonial-1.png';
-import user2 from '../../../public/images/Home/home_testimonial-2.png';
-import user3 from '../../../public/images/Home/home_testimonial-3.png';
-import payImg from '../../../public/images/Home/home_pay_section-img1.png';
+// ../../../public/images/
+import user1 from '/images/Home/home_testimonial-1.png';
+import user2 from '/images/Home/home_testimonial-2.png';
+import user3 from '/images/Home/home_testimonial-3.png';
+import payImg from '/images/Home/home_pay_section-img1.png';
+import brand1 from '/images/Brands/brand-1.png';
+import brand2 from '/images/Brands/brand-2.png';
+import brand3 from '/images/Brands/brand-3.png';
+import brand4 from '/images/Brands/brand-4.png';
+import brand5 from '/images/Brands/brand-5.png';
+import brand6 from '/images/Brands/brand-6.png';
 
 export const homeItems = {
   payImg: payImg,
@@ -70,4 +77,5 @@ export const homeItems = {
       job: 'CEO Nulla Purus ',
     },
   ],
+  brandItems: [brand1, brand2, brand3, brand4, brand5, brand6],
 };
