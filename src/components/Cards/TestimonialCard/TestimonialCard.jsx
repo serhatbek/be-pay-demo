@@ -10,7 +10,7 @@ const TestimonialCard = ({ image, desc, name, job, className }) => {
       </figure>
       <p className='testimonial-card__desc'>{desc}</p>
       <p className='testimonial-card__name'>
-        {name} <span>{job}</span>
+        {name} <strong>{job}</strong>
       </p>
     </blockquote>
   );

@@ -1,8 +1,10 @@
 import user1 from '../../../public/images/Home/home_testimonial-1.png';
 import user2 from '../../../public/images/Home/home_testimonial-2.png';
 import user3 from '../../../public/images/Home/home_testimonial-3.png';
+import payImg from '../../../public/images/Home/home_pay_section-img1.png';
 
 export const homeItems = {
+  payImg: payImg,
   ctaCard: {
     title: 'A few reasons why Be Pay might be the right fit',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla porttitor. Eget nunc scelerisque viverra mauris in. Venenatis cras sed felis eget velit aliquet sagittis id. Sit amet est placerat in egestas. Mauris rhoncus orci.',

@@ -64,6 +64,10 @@
   background-position: center;
   padding: 50px 0;
 
+  @include c.media(tablet) {
+    padding: 20px 0;
+  }
+
   .container {
     #{ $self }__top {
       display: flex;
@@ -71,6 +75,9 @@
       margin-bottom: 100px;
       @include c.media(tablet-wide) {
         flex-direction: column;
+      }
+      @include c.media(tablet) {
+        margin-bottom: 50px;
       }
 
       .cta-card {
@@ -106,6 +113,10 @@
         color: c.$light-one;
         margin-bottom: 60px;
         font-size: clamp(23px, calc(1.4375rem + ((1vw - 4.2px) * 0.875)), 30px);
+
+        @include c.media(tablet) {
+          margin-bottom: 40px;
+        }
       }
     }
   }

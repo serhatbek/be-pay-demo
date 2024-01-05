@@ -1,3 +1,4 @@
+import './Home.scss';
 import { nanoid } from 'nanoid';
 import { homeItems } from '../../assets/data/home';
 import {
@@ -5,12 +6,12 @@ import {
   Button,
   InfoCard,
   TestimonialCard,
+  TestimonialSlider,
 } from '../../components';
-import './Home.scss';
-import payImg from '/images/Home/home_pay_section-img1.png';
+import { Slide } from '../../components/Slider/TestimonialSlider/TestimonialSlider';
 
 const Home = () => {
-  const { infoItems, ctaCard, testimonialItems } = homeItems;
+  const { payImg, infoItems, ctaCard, testimonialItems } = homeItems;
   return (
     <>
       <section className='section section-pay'>
@@ -70,15 +71,20 @@ const Home = () => {
           </div>
           <div className='section-testimonials__bottom'>
             <h2>Testimonials</h2>
-            {testimonialItems?.map((item) => (
-              <TestimonialCard
-                key={nanoid()}
-                image={item.img}
-                desc={item.desc}
-                name={item.name}
-                job={item.job}
-              />
-            ))}
+            <TestimonialSlider>
+              {testimonialItems?.map((item) => (
+                <Slide key={nanoid()}>
+                  <TestimonialCard
+                    key={nanoid()}
+                    image={item.img}
+                    desc={item.desc}
+                    name={item.name}
+                    job={item.job}
+                  />
+                </Slide>
+              ))}
+            </TestimonialSlider>
+            <div className='testimonial-slider__pagination-div'></div>
           </div>
         </div>
       </section>
