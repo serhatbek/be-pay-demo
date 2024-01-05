@@ -1,14 +1,14 @@
 import './Home.scss';
 import { nanoid } from 'nanoid';
 import { homeItems } from '../../assets/data/home';
+import { Slide } from '../../components/Slider/Slider';
 import {
   ActionShowcaseCard,
+  TestimonialCard,
   Button,
   InfoCard,
-  TestimonialCard,
-  TestimonialSlider,
+  Slider,
 } from '../../components';
-import { Slide } from '../../components/Slider/TestimonialSlider/TestimonialSlider';
 
 const Home = () => {
   const { payImg, infoItems, ctaCard, testimonialItems } = homeItems;
@@ -71,7 +71,18 @@ const Home = () => {
           </div>
           <div className='section-testimonials__bottom'>
             <h2>Testimonials</h2>
-            <TestimonialSlider>
+            <Slider
+              className='testimonial-slider'
+              slidesPerView={1}
+              autoplay={{
+                delay: 4500,
+                disableOnInteraction: false,
+              }}
+              pagination={{
+                el: '.testimonial-slider__pagination-div',
+                clickable: true,
+              }}
+            >
               {testimonialItems?.map((item) => (
                 <Slide key={nanoid()}>
                   <TestimonialCard
@@ -83,7 +94,7 @@ const Home = () => {
                   />
                 </Slide>
               ))}
-            </TestimonialSlider>
+            </Slider>
             <div className='testimonial-slider__pagination-div'></div>
           </div>
         </div>
