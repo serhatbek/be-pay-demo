@@ -16,11 +16,16 @@
     font-weight: 700;
   }
 
-  &__subtitle {
+  &__dec {
     color: c.$yellow-one;
     font-size: clamp(13px, calc(0.8125rem + ((1vw - 4.2px) * 0.625)), 18px);
     line-height: clamp(19px, calc(2.3125rem + ((1vw - 4.2px) * 3.125)), 28px);
     font-weight: 700;
+  }
+
+  &__subtitle {
+    color: c.$light-one;
+    font-size: clamp(23px, calc(1.4375rem + ((1vw - 4.2px) * 0.875)), 30px);
   }
 }
 
@@ -41,5 +46,21 @@
 
   .swiper-pagination-bullet-active {
     background: c.$light-one !important;
+  }
+}
+
+.client-slider__buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  .icon {
+    font-size: 38px;
+    color: c.$light-one;
+    cursor: pointer;
+
+    @include c.media(tablet) {
+      font-size: 32px;
+    }
   }
 }

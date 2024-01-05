@@ -107,12 +107,11 @@
       }
     }
 
-    #{ $self }__bottom {
-      h2 {
+    #{ $self }__middle {
+      position: relative;
+      padding-bottom: 40px;
+      h3 {
         text-align: center;
-        color: c.$light-one;
-        margin-bottom: 60px;
-        font-size: clamp(23px, calc(1.4375rem + ((1vw - 4.2px) * 0.875)), 30px);
 
         @include c.media(tablet) {
           margin-bottom: 40px;
@@ -124,6 +123,21 @@
           margin: 0 auto;
         }
       }
+    }
+
+    #{ $self }__bottom {
+      position: relative;
+      margin-top: 40px;
+      padding-bottom: 20px;
+
+      .client-slider {
+        padding: 30px 0;
+      }
+      // .swiper-slide {
+      //   .clients-item {
+      //     margin: 0 auto;
+      //   }
+      // }
     }
   }
 }

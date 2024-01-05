@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import PropTypes from 'prop-types';
 
 import 'swiper/css/bundle';
 import 'swiper/css/navigation';
@@ -25,6 +26,11 @@ const Slider = ({ children, ...props }) => {
       {children}
     </Swiper>
   );
+};
+
+Slider.propTypes = {
+  children: PropTypes.array,
+  props: PropTypes.any,
 };
 
 export { SwiperSlide as Slide };

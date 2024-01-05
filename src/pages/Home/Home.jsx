@@ -8,10 +8,13 @@ import {
   Button,
   InfoCard,
   Slider,
+  ClientItem,
 } from '../../components';
 
 const Home = () => {
-  const { payImg, infoItems, ctaCard, testimonialItems } = homeItems;
+  const { payImg, infoItems, ctaCard, testimonialItems, clientItems } =
+    homeItems;
+  // console.log(clientItems.map((item) => item));
   return (
     <>
       <section className='section section-pay'>
@@ -69,8 +72,8 @@ const Home = () => {
               ))}
             </div>
           </div>
-          <div className='section-testimonials__bottom'>
-            <h2>Testimonials</h2>
+          <div className='section-testimonials__middle'>
+            <h3 className='section__subtitle'>Testimonials</h3>
             <Slider
               className='testimonial-slider'
               slidesPerView={1}
@@ -96,6 +99,31 @@ const Home = () => {
               ))}
             </Slider>
             <div className='testimonial-slider__pagination-div'></div>
+          </div>
+          <div className='section-testimonials__bottom'>
+            <h3 className='section__subtitle'>Clients</h3>
+            <Slider
+              className='client-slider'
+              slidesPerView={4}
+              navigation={{
+                prevEl: '.client-slider__buttons--prev',
+                nextEl: '.client-slider__buttons--next',
+              }}
+              autoplay={{
+                delay: 4500,
+                disableOnInteraction: false,
+              }}
+            >
+              {clientItems?.map((item) => (
+                <Slide key={nanoid()}>
+                  <ClientItem image={item} />
+                </Slide>
+              ))}
+            </Slider>
+            <div className='client-slider__buttons'>
+              <i className='icon icon-chevron-left-square client-slider__buttons--prev'></i>
+              <i className='icon icon-chevron-right-square client-slider__buttons--next'></i>
+            </div>
           </div>
         </div>
       </section>
