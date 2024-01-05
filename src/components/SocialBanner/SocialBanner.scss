@@ -1,3 +1,5 @@
+@use '../../assets/css/common.scss' as c;
+
 .social-banner {
   &__content {
     padding: 0 15px 40px 15px;
@@ -7,7 +9,14 @@
     }
 
     > p {
+      color: c.$purple-three;
       margin-bottom: 40px;
+    }
+
+    > div {
+      .ant-btn:first-child {
+        margin-right: 10px;
+      }
     }
   }
 }

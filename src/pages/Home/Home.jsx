@@ -144,11 +144,16 @@ const Home = () => {
           <SocialBanner
             title={socialBannerItem.title}
             desc={socialBannerItem.desc}
-            btnClass='ant-btn--pink'
-            btnText={socialBannerItem.btnText}
-            btnIcon={socialBannerItem.btnIcon}
-            btnLink={socialBannerItem.btnLink}
-          />
+          >
+            <Button
+              type='link'
+              href={socialBannerItem.btnLink}
+              iconRight={socialBannerItem.btnIcon}
+              className='ant-btn--pink'
+            >
+              {socialBannerItem.btnText}
+            </Button>
+          </SocialBanner>
         }
       </section>
     </>
