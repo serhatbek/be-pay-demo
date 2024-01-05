@@ -9,21 +9,26 @@ import {
   InfoCard,
   Slider,
   ClientItem,
+  Icon,
+  SocialBanner,
 } from '../../components';
 
 const Home = () => {
-  const { payImg, infoItems, ctaCard, testimonialItems, clientItems } =
-    homeItems;
-  // console.log(clientItems.map((item) => item));
+  const {
+    payImg,
+    infoItems,
+    ctaCard,
+    testimonialItems,
+    clientItems,
+    socialBannerItem,
+  } = homeItems;
   return (
     <>
       <section className='section section-pay'>
         <div className='container'>
           <div>
             <h2 className='section__title'>Start paying via your smartphone</h2>
-            <p className='section__subtitle'>
-              System for paying & managing money.
-            </p>
+            <p className='section__desc'>System for paying & managing money.</p>
             <div>
               <Button
                 type='link'
@@ -110,7 +115,7 @@ const Home = () => {
                 nextEl: '.client-slider__buttons--next',
               }}
               autoplay={{
-                delay: 4500,
+                delay: 6000,
                 disableOnInteraction: false,
               }}
             >
@@ -121,11 +126,30 @@ const Home = () => {
               ))}
             </Slider>
             <div className='client-slider__buttons'>
-              <i className='icon icon-chevron-left-square client-slider__buttons--prev'></i>
-              <i className='icon icon-chevron-right-square client-slider__buttons--next'></i>
+              <Icon
+                icon='chevron-left-square'
+                className='client-slider__buttons--prev'
+              />
+              <Icon
+                icon='chevron-right-square'
+                className='client-slider__buttons--next'
+              />
             </div>
           </div>
         </div>
+      </section>
+
+      <section className='section section-banner'>
+        {
+          <SocialBanner
+            title={socialBannerItem.title}
+            desc={socialBannerItem.desc}
+            btnClass='ant-btn--pink'
+            btnText={socialBannerItem.btnText}
+            btnIcon={socialBannerItem.btnIcon}
+            btnLink={socialBannerItem.btnLink}
+          />
+        }
       </section>
     </>
   );

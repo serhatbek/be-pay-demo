@@ -133,11 +133,16 @@
       .client-slider {
         padding: 30px 0;
       }
-      // .swiper-slide {
-      //   .clients-item {
-      //     margin: 0 auto;
-      //   }
-      // }
     }
   }
+}
+
+.section-banner {
+  padding-top: 80px;
+  padding-bottom: 30px;
+  @include c.imageCacheBust('/images/Home/home_pay_sectionbg4.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  display: flex;
+  justify-content: center;
 }

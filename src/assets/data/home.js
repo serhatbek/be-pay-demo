@@ -78,13 +78,11 @@ export const homeItems = {
     },
   ],
   clientItems: [client1, client2, client3, client4, client5, client6],
+  socialBannerItem: {
+    title: 'The Be Pay plan starts from $14.99',
+    desc: 'Find the plan that’s right for you',
+    btnText: 'Show prices',
+    btnLink: '/',
+    btnIcon: 'arrow-circle',
+  },
 };
-
-// clientItems: [
-//   { img: 'client1' },
-//   { img: 'client2' },
-//   { img: 'client3' },
-//   { img: 'client4' },
-//   { img: 'client5' },
-//   { img: 'client6' },
-// ]
