@@ -1,10 +1,10 @@
 import './Pricing.scss';
-import aboutItems from '../../assets/data/about';
-import { Button, SocialBanner } from '../../components';
 import { nanoid } from 'nanoid';
+import pricingItems from '../../assets/data/pricing';
+import { Button, SocialBanner } from '../../components';
 
 const Pricing = () => {
-  const { socialBannerItem } = aboutItems;
+  const { socialBannerItem } = pricingItems;
   return (
     <>
       <section className='section section-banner'>

@@ -1,4 +1,4 @@
-const pricingItems = {
+const contactItems = {
   socialBannerItem: {
     title: 'Follow us on social media',
     desc: 'Vestibulum dapibus, mauris nec malesuada fames ac turpis velit',
@@ -19,4 +19,4 @@ const pricingItems = {
   },
 };
 
-export default pricingItems;
+export default contactItems;

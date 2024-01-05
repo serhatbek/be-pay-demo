@@ -1,10 +1,10 @@
 import './Features.scss';
-import aboutItems from '../../assets/data/about';
-import { Button, SocialBanner } from '../../components';
 import { nanoid } from 'nanoid';
+import featuresItems from '../../assets/data/features';
+import { Button, SocialBanner } from '../../components';
 
 const Features = () => {
-  const { socialBannerItem } = aboutItems;
+  const { socialBannerItem } = featuresItems;
   return (
     <>
       <section className='section section-banner'>

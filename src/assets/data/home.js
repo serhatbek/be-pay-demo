@@ -82,7 +82,7 @@ export const homeItems = {
     title: 'The Be Pay plan starts from $14.99',
     desc: 'Find the plan that’s right for you',
     btnText: 'Show prices',
-    btnLink: '/',
+    btnLink: '/be-pay-demo/',
     btnIcon: 'arrow-circle',
   },
 };

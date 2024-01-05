@@ -5,13 +5,13 @@ const aboutItems = {
     buttons: [
       {
         btnText: 'Facebook',
-        btnLink: '/',
+        btnLink: '/be-pay-demo/',
         btnIcon: 'facebook',
         btnClass: 'ant-btn--pink',
       },
       {
         btnText: 'Twitter',
-        btnLink: '/',
+        btnLink: '/be-pay-demo/',
         btnIcon: 'twitter',
         btnClass: 'ant-btn--blue',
       },
