@@ -13,6 +13,7 @@ const About = () => {
         >
           {socialBannerItem.buttons.map((item) => (
             <Button
+              key={nanoid()}
               className={item.btnClass}
               type='link'
               href={item.btnLink}
