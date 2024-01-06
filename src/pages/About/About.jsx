@@ -20,6 +20,7 @@ const About = () => {
           </Slide>
         ))}
       </SectionClients>
+
       <SectionBanner
         title={socialBannerItem.title}
         desc={socialBannerItem.desc}
