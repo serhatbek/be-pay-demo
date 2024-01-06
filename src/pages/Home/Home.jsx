@@ -12,6 +12,7 @@ import {
   Icon,
   SectionBanner,
   SectionClients,
+  SectionTestimonial,
 } from '../../components';
 
 const Home = () => {
@@ -55,9 +56,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='section section-testimonials'>
-        <div className='container'>
-          <div className='section-testimonials__top'>
+      <section className='section-multiple'>
+        <section className='section-reasons'>
+          <div className='container'>
             <ActionShowcaseCard
               title={ctaCard.title}
               desc={ctaCard.desc}
@@ -78,44 +79,30 @@ const Home = () => {
               ))}
             </div>
           </div>
-          <div className='section-testimonials__middle'>
-            <h3 className='section__subtitle'>Testimonials</h3>
-            <Slider
-              className='testimonial-slider'
-              slidesPerView={1}
-              autoplay={{
-                delay: 4500,
-                disableOnInteraction: false,
-              }}
-              pagination={{
-                el: '.testimonial-slider__pagination-div',
-                clickable: true,
-              }}
-            >
-              {testimonialItems?.map((item) => (
-                <Slide key={nanoid()}>
-                  <TestimonialCard
-                    key={nanoid()}
-                    image={item.img}
-                    desc={item.desc}
-                    name={item.name}
-                    job={item.job}
-                  />
-                </Slide>
-              ))}
-            </Slider>
-            <div className='testimonial-slider__pagination-div'></div>
-          </div>
-        </div>
+        </section>
 
-        <SectionClients>
-          {clientItems.map((item) => (
+        <SectionTestimonial>
+          {testimonialItems?.map((item) => (
             <Slide key={nanoid()}>
-              <ClientItem image={item} />
+              <TestimonialCard
+                key={nanoid()}
+                image={item.img}
+                desc={item.desc}
+                name={item.name}
+                job={item.job}
+              />
             </Slide>
           ))}
-        </SectionClients>
+        </SectionTestimonial>
       </section>
+
+      <SectionClients>
+        {clientItems.map((item) => (
+          <Slide key={nanoid()}>
+            <ClientItem image={item} />
+          </Slide>
+        ))}
+      </SectionClients>
 
       <SectionBanner
         title={socialBannerItem.title}

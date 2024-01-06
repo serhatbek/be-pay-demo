@@ -1,0 +1,20 @@
+@use '../../../assets/css/common.scss' as c;
+
+.testimonial-slider {
+  position: relative;
+  padding-bottom: 40px;
+  h3 {
+    text-align: center;
+    margin-bottom: 60px;
+
+    @include c.media(tablet) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .swiper-slide {
+    .testimonial-card {
+      margin: 0 auto;
+    }
+  }
+}

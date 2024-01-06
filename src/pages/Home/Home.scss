@@ -57,7 +57,7 @@
   }
 }
 
-.section-testimonials {
+.section-multiple {
   $self: &;
   @include c.imageCacheBust('/images/Home/home_pay_sectionbg3.png');
   background-repeat: no-repeat;
@@ -68,8 +68,8 @@
     padding: 20px 0;
   }
 
-  .container {
-    #{ $self }__top {
+  .section-reasons {
+    > .container {
       display: flex;
       align-items: center;
       margin-bottom: 100px;
@@ -103,24 +103,6 @@
           @include c.media(tablet) {
             margin-bottom: 20px;
           }
-        }
-      }
-    }
-
-    #{ $self }__middle {
-      position: relative;
-      padding-bottom: 40px;
-      h3 {
-        text-align: center;
-
-        @include c.media(tablet) {
-          margin-bottom: 40px;
-        }
-      }
-
-      .swiper-slide {
-        .testimonial-card {
-          margin: 0 auto;
         }
       }
     }
