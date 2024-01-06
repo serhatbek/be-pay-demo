@@ -16,14 +16,16 @@ const ActionShowcaseCard = ({
     <div className={classNames('cta-card', className)}>
       <h3>{title}</h3>
       <p>{desc}</p>
-      <Button
-        className={btnClass}
-        type='link'
-        href={btnLink}
-        iconRight={btnIcon}
-      >
-        {btnText}
-      </Button>
+      {btnText && (
+        <Button
+          className={btnClass}
+          type='link'
+          href={btnLink}
+          iconRight={btnIcon}
+        >
+          {btnText}
+        </Button>
+      )}
     </div>
   );
 };

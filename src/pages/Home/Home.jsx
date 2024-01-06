@@ -10,7 +10,8 @@ import {
   Slider,
   ClientItem,
   Icon,
-  SocialBanner,
+  SectionBanner,
+  SectionClients,
 } from '../../components';
 
 const Home = () => {
@@ -105,57 +106,30 @@ const Home = () => {
             </Slider>
             <div className='testimonial-slider__pagination-div'></div>
           </div>
-          <div className='section-testimonials__bottom'>
-            <h3 className='section__subtitle'>Clients</h3>
-            <Slider
-              className='client-slider'
-              slidesPerView={4}
-              navigation={{
-                prevEl: '.client-slider__buttons--prev',
-                nextEl: '.client-slider__buttons--next',
-              }}
-              autoplay={{
-                delay: 6000,
-                disableOnInteraction: false,
-              }}
-            >
-              {clientItems?.map((item) => (
-                <Slide key={nanoid()}>
-                  <ClientItem image={item} />
-                </Slide>
-              ))}
-            </Slider>
-            <div className='client-slider__buttons'>
-              <Icon
-                icon='chevron-left-square'
-                className='client-slider__buttons--prev'
-              />
-              <Icon
-                icon='chevron-right-square'
-                className='client-slider__buttons--next'
-              />
-            </div>
-          </div>
         </div>
+
+        <SectionClients>
+          {clientItems.map((item) => (
+            <Slide key={nanoid()}>
+              <ClientItem image={item} />
+            </Slide>
+          ))}
+        </SectionClients>
       </section>
 
-      <section className='section section-banner'>
-        {
-          <SocialBanner
-            title={socialBannerItem.title}
-            desc={socialBannerItem.desc}
-          >
-            <Button
-              type='link'
-              href={socialBannerItem.btnLink}
-              iconRight={socialBannerItem.btnIcon}
-              className='ant-btn--pink'
-            >
-              {socialBannerItem.btnText}
-            </Button>
-          </SocialBanner>
-        }
-      </section>
+      <SectionBanner
+        title={socialBannerItem.title}
+        desc={socialBannerItem.desc}
+      >
+        <Button
+          type='link'
+          href={socialBannerItem.btnLink}
+          iconRight={socialBannerItem.btnIcon}
+          className='ant-btn--pink'
+        >
+          {socialBannerItem.btnText}
+        </Button>
+      </SectionBanner>
     </>
   );
 };

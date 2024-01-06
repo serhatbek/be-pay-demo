@@ -1,0 +1,30 @@
+@use '../../../assets/css/common.scss' as c;
+
+.section-clients {
+  margin-top: 40px;
+  padding-bottom: 20px;
+
+  .container {
+    position: relative;
+  }
+
+  .client-slider {
+    padding: 30px 0;
+
+    &__buttons {
+      position: absolute;
+      top: 0;
+      right: 15px;
+
+      .icon {
+        font-size: 38px;
+        color: c.$light-one;
+        cursor: pointer;
+
+        @include c.media(tablet) {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}

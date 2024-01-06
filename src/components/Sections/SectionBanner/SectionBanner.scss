@@ -1,0 +1,30 @@
+@use '../../../assets/css/common.scss' as c;
+
+.section-banner {
+  padding-top: 80px;
+  padding-bottom: 30px;
+  @include c.imageCacheBust('/images/Home/home_pay_sectionbg4.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    padding: 0 15px 40px 15px;
+    text-align: center;
+    > h3 {
+      margin-bottom: 15px;
+    }
+
+    > p {
+      color: c.$purple-three;
+      margin-bottom: 40px;
+    }
+
+    > div {
+      .ant-btn:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}

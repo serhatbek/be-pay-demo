@@ -48,19 +48,3 @@
     background: c.$light-one !important;
   }
 }
-
-.client-slider__buttons {
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  .icon {
-    font-size: 38px;
-    color: c.$light-one;
-    cursor: pointer;
-
-    @include c.media(tablet) {
-      font-size: 32px;
-    }
-  }
-}

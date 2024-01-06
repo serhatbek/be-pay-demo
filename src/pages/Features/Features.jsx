@@ -1,30 +1,28 @@
 import './Features.scss';
 import { nanoid } from 'nanoid';
 import featuresItems from '../../assets/data/features';
-import { Button, SocialBanner } from '../../components';
+import { Button, SectionBanner } from '../../components';
 
 const Features = () => {
   const { socialBannerItem } = featuresItems;
   return (
     <>
-      <section className='section section-banner'>
-        <SocialBanner
-          title={socialBannerItem.title}
-          desc={socialBannerItem.desc}
-        >
-          {socialBannerItem.buttons.map((item) => (
-            <Button
-              key={nanoid()}
-              className={item.btnClass}
-              type='link'
-              href={item.btnLink}
-              iconRight={item.btnIcon}
-            >
-              {item.btnText}
-            </Button>
-          ))}
-        </SocialBanner>
-      </section>
+      <SectionBanner
+        title={socialBannerItem.title}
+        desc={socialBannerItem.desc}
+      >
+        {socialBannerItem.buttons.map((item) => (
+          <Button
+            key={nanoid()}
+            className={item.btnClass}
+            type='link'
+            href={item.btnLink}
+            iconRight={item.btnIcon}
+          >
+            {item.btnText}
+          </Button>
+        ))}
+      </SectionBanner>
     </>
   );
 };
