@@ -1,0 +1,58 @@
+@use '../../../assets/css/common.scss' as c;
+
+.section-hero {
+  @include c.imageCacheBusts(
+    '/images/Home/home_pay_sectionbg1.png',
+    '/images/Home/home_pay_sectionbg2.png'
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 160px;
+
+  .container {
+    > div {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      > h2 {
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      > p {
+        margin-bottom: 15px;
+      }
+
+      > div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include c.media(tablet-wide) {
+          flex-direction: column;
+          margin-bottom: 20px;
+        }
+
+        > .ant-btn {
+          font-weight: 400;
+        }
+
+        > .ant-btn:first-child {
+          margin-right: 10px;
+          margin-bottom: 15px;
+
+          @include c.media(tablet-wide) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    > figure {
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}

@@ -11,6 +11,25 @@ import client5 from '/images/Clients/client-5.png';
 import client6 from '/images/Clients/client-6.png';
 
 export const homeItems = {
+  heroItems: {
+    title: 'Start paying via your smartphone',
+    desc: 'System for paying & managing money.',
+    img: payImg,
+    buttons: [
+      {
+        href: '/',
+        text: 'Try for free',
+        class: 'ant-btn--pink',
+        icon: 'arrow-circle',
+      },
+      {
+        href: '/',
+        text: 'Watch video',
+        class: 'ant-btn--purple',
+        icon: 'watch',
+      },
+    ],
+  },
   payImg: payImg,
   ctaCard: {
     title: 'A few reasons why Be Pay might be the right fit',

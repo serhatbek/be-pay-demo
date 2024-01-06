@@ -7,17 +7,16 @@ import {
   TestimonialCard,
   Button,
   InfoCard,
-  Slider,
   ClientItem,
-  Icon,
   SectionBanner,
   SectionClients,
   SectionTestimonial,
+  SectionHero,
 } from '../../components';
 
 const Home = () => {
   const {
-    payImg,
+    heroItems,
     infoItems,
     ctaCard,
     testimonialItems,
@@ -26,35 +25,23 @@ const Home = () => {
   } = homeItems;
   return (
     <>
-      <section className='section section-pay'>
-        <div className='container'>
-          <div>
-            <h2 className='section__title'>Start paying via your smartphone</h2>
-            <p className='section__desc'>System for paying & managing money.</p>
-            <div>
-              <Button
-                type='link'
-                href='/'
-                className='ant-btn--pink'
-                iconRight='arrow-circle'
-              >
-                Try for free
-              </Button>
-              <Button
-                type='link'
-                href='/'
-                className='ant-btn--purple'
-                iconRight='watch'
-              >
-                Watch video
-              </Button>
-            </div>
-          </div>
-          <figure>
-            <img src={payImg} />
-          </figure>
-        </div>
-      </section>
+      <SectionHero
+        title={heroItems.title}
+        desc={heroItems.desc}
+        image={heroItems.img}
+      >
+        {heroItems?.buttons?.map((btn) => (
+          <Button
+            key={nanoid()}
+            type='link'
+            href={btn.href}
+            className={btn.class}
+            iconRight={btn.icon}
+          >
+            {btn.text}
+          </Button>
+        ))}
+      </SectionHero>
 
       <section className='section-multiple'>
         <section className='section-reasons'>
