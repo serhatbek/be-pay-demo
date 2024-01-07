@@ -24,7 +24,7 @@ const Home = () => {
     socialBannerItem,
   } = homeItems;
   return (
-    <>
+    <section className='section-home'>
       <SectionHero
         title={heroItems.title}
         desc={heroItems.desc}
@@ -43,7 +43,7 @@ const Home = () => {
         ))}
       </SectionHero>
 
-      <section className='section-multiple'>
+      <section className='wrapper'>
         <section className='section-reasons'>
           <div className='container'>
             <ActionShowcaseCard
@@ -104,7 +104,7 @@ const Home = () => {
           {socialBannerItem.btnText}
         </Button>
       </SectionBanner>
-    </>
+    </section>
   );
 };
 

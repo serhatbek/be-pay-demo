@@ -1,50 +1,51 @@
 @use '../../assets/css/common.scss' as c;
 
-.section-multiple {
-  $self: &;
-  @include c.imageCacheBust('/images/Home/home_pay_sectionbg3.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 50px 0;
+.section-home {
+  .wrapper {
+    @include c.imageCacheBust('/images/Home/home_pay_sectionbg3.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px 0;
 
-  @include c.media(tablet) {
-    padding: 20px 0;
-  }
+    @include c.media(tablet) {
+      padding: 20px 0;
+    }
 
-  .section-reasons {
-    > .container {
-      display: flex;
-      align-items: center;
-      margin-bottom: 100px;
-      @include c.media(tablet-wide) {
-        flex-direction: column;
-      }
-      @include c.media(tablet) {
-        margin-bottom: 50px;
-      }
-
-      .cta-card {
-        width: 35%;
-        @include c.media(tablet-wide) {
-          width: 80%;
-          margin-bottom: 40px;
-        }
-      }
-      .box {
-        width: 65%;
+    .section-reasons {
+      > .container {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 100px;
         @include c.media(tablet-wide) {
-          justify-content: flex-start;
-          width: 80%;
+          flex-direction: column;
+        }
+        @include c.media(tablet) {
+          margin-bottom: 50px;
         }
 
-        > div {
-          margin-bottom: 40px;
+        .cta-card {
+          width: 35%;
+          @include c.media(tablet-wide) {
+            width: 80%;
+            margin-bottom: 40px;
+          }
+        }
+        .box {
+          width: 65%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+          @include c.media(tablet-wide) {
+            justify-content: flex-start;
+            width: 80%;
+          }
 
-          @include c.media(tablet) {
-            margin-bottom: 20px;
+          > div {
+            margin-bottom: 40px;
+
+            @include c.media(tablet) {
+              margin-bottom: 20px;
+            }
           }
         }
       }

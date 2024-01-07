@@ -5,14 +5,20 @@ import {
   ClientItem,
   SectionBanner,
   SectionClients,
+  SectionPageTitle,
 } from '../../components';
 import { nanoid } from 'nanoid';
 import { Slide } from '../../components/Slider/Slider';
 
 const About = () => {
-  const { socialBannerItem, clientItems } = aboutItems;
+  const { pageTitleItems, socialBannerItem, clientItems } = aboutItems;
   return (
-    <>
+    <section className='section-about'>
+      <SectionPageTitle
+        title={pageTitleItems.title}
+        desc={pageTitleItems.desc}
+      />
+
       <SectionClients>
         {clientItems?.map((item) => (
           <Slide key={nanoid()}>
@@ -37,7 +43,7 @@ const About = () => {
           </Button>
         ))}
       </SectionBanner>
-    </>
+    </section>
   );
 };
 

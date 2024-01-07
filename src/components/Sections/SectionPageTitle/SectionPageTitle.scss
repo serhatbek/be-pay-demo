@@ -1,0 +1,25 @@
+@use '../../../assets/css/common.scss' as c;
+
+.section-page-title {
+  padding-top: 160px;
+  padding-bottom: 160px;
+  @include c.imageCacheBust('/images/page-title-bg.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  text-align: center;
+
+  .container {
+    max-width: 800px !important;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    > h2 {
+      margin-bottom: 15px;
+    }
+
+    > p {
+      margin-bottom: 15px;
+    }
+  }
+}
