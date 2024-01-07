@@ -6,6 +6,10 @@ import client5 from '/images/Clients/client-5.png';
 import client6 from '/images/Clients/client-6.png';
 
 const pricingItems = {
+  pageTitleItems: {
+    title: 'Pricing list',
+    desc: 'Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.Curabitur et ligula.',
+  },
   clientItems: [client1, client2, client3, client4, client5, client6],
   socialBannerItem: {
     title: 'Follow us on social media',
