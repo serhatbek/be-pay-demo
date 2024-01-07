@@ -6,6 +6,10 @@ import client5 from '/images/Clients/client-5.png';
 import client6 from '/images/Clients/client-6.png';
 
 const featuresItems = {
+  pageTitleItems: {
+    title: 'Features',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris dolor, gravida a varius blandit, auctor eget purus.',
+  },
   clientItems: [client1, client2, client3, client4, client5, client6],
   socialBannerItem: {
     title: 'Follow us on social media',

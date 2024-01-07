@@ -1,7 +1,4 @@
 @use '../../assets/css/common.scss' as c;
 
 .section-about {
-  @include c.imageCacheBust('/images/Home/home_pay_sectionbg4.png');
-  background-repeat: no-repeat;
-  background-position: center top;
 }

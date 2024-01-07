@@ -13,7 +13,7 @@ import { Slide } from '../../components/Slider/Slider';
 const About = () => {
   const { pageTitleItems, socialBannerItem, clientItems } = aboutItems;
   return (
-    <section className='section-about'>
+    <section className='section section-about section--bg'>
       <SectionPageTitle
         title={pageTitleItems.title}
         desc={pageTitleItems.desc}

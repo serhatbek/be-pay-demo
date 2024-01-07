@@ -6,13 +6,19 @@ import {
   ClientItem,
   SectionBanner,
   SectionClients,
+  SectionPageTitle,
 } from '../../components';
 import { Slide } from '../../components/Slider/Slider';
 
 const Features = () => {
-  const { socialBannerItem, clientItems } = featuresItems;
+  const { pageTitleItems, socialBannerItem, clientItems } = featuresItems;
   return (
-    <>
+    <section className='section section-features section--bg'>
+      <SectionPageTitle
+        title={pageTitleItems.title}
+        desc={pageTitleItems.desc}
+      />
+
       <SectionClients>
         {clientItems?.map((item) => (
           <Slide key={nanoid()}>
@@ -37,7 +43,7 @@ const Features = () => {
           </Button>
         ))}
       </SectionBanner>
-    </>
+    </section>
   );
 };
 

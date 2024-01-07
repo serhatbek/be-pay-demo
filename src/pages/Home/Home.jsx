@@ -24,7 +24,7 @@ const Home = () => {
     socialBannerItem,
   } = homeItems;
   return (
-    <section className='section-home'>
+    <section className='section section-home'>
       <SectionHero
         title={heroItems.title}
         desc={heroItems.desc}
