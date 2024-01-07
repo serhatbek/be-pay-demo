@@ -6,6 +6,10 @@ import client5 from '/images/Clients/client-5.png';
 import client6 from '/images/Clients/client-6.png';
 
 const contactItems = {
+  pageTitleItems: {
+    title: 'Contact us',
+    desc: 'Vivamus in diam turpis. In condimentum maximus tristique. Maecenas non laoreet odio.',
+  },
   clientItems: [client1, client2, client3, client4, client5, client6],
   socialBannerItem: {
     title: 'Follow us on social media',
