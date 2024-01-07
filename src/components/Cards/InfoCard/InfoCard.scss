@@ -5,6 +5,18 @@
   width: 100%;
   display: flex;
 
+  &--blue {
+    max-width: 382px;
+    background-color: c.$blue-three;
+    padding: 25px;
+    border-radius: 8px;
+
+    @include c.media(tablet-wide) {
+      max-width: 100% !important;
+      padding: 20px;
+    }
+  }
+
   .icon {
     color: c.$yellow-one;
     margin-right: 20px;
@@ -23,11 +35,8 @@
 
   p {
     color: c.$light-one;
-    font-size: 18px;
+    font-size: clamp(13px, calc(0.8125rem + ((1vw - 4.2px) * 0.625)), 18px);
     line-height: 28px;
     font-weight: 700;
-    @include c.media(tablet) {
-      font-size: 15px;
-    }
   }
 }

@@ -36,4 +36,50 @@
       }
     }
   }
+
+  &__middle {
+    padding: 70px 0;
+    @include c.media(tablet) {
+      padding: 20px 0;
+    }
+
+    > .container {
+      display: flex;
+      align-items: center;
+      @include c.media(tablet) {
+        flex-direction: column;
+      }
+
+      .cta-card {
+        width: 40% !important;
+
+        @include c.media(tablet) {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 50px 0;
+    .container {
+      > h3 {
+        color: c.$light-one;
+        font-size: clamp(18px, calc(1.125rem + ((1vw - 4.2px) * 1.5)), 30px);
+        font-weight: 700;
+        margin-bottom: 35px;
+        text-align: center;
+      }
+      .box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        // gap: 20px;
+
+        .info-card--blue {
+          margin: 5px;
+        }
+      }
+    }
+  }
 }

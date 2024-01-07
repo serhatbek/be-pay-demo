@@ -4,6 +4,7 @@ import {
   ActionShowcaseCard,
   Button,
   ClientItem,
+  InfoCard,
   SectionBanner,
   SectionClients,
   SectionPageTitle,
@@ -13,8 +14,15 @@ import { nanoid } from 'nanoid';
 import { Slide } from '../../components/Slider/Slider';
 
 const About = () => {
-  const { pageTitleItems, ctaCard, teamCards, socialBannerItem, clientItems } =
-    aboutItems;
+  const {
+    pageTitleItems,
+    ctaCard,
+    teamCards,
+    socialBannerItem,
+    clientItems,
+    sectionMiddleItems,
+    jobs,
+  } = aboutItems;
   return (
     <section className='section section-about section--bg'>
       <SectionPageTitle
@@ -35,6 +43,7 @@ const About = () => {
           <div className='box'>
             {teamCards?.map((item) => (
               <TeamCard
+                key={nanoid()}
                 image={item.image}
                 name={item.name}
                 job={item.job}
@@ -42,6 +51,7 @@ const About = () => {
               >
                 {item.socialIcons?.map((item) => (
                   <Button
+                    key={nanoid()}
                     className='ant-btn--pink'
                     type='link'
                     href={item.link}
@@ -55,10 +65,31 @@ const About = () => {
       </div>
 
       <div className='section-about__middle'>
-        <div className='container'></div>
+        <div className='container'>
+          <ActionShowcaseCard
+            title={sectionMiddleItems.showcaseCard.title}
+            desc={sectionMiddleItems.showcaseCard.desc}
+          />
+
+          <figure>
+            <img src={sectionMiddleItems.image} />
+          </figure>
+        </div>
       </div>
       <div className='section-about__bottom'>
-        <div className='container'></div>
+        <div className='container'>
+          <h3>We are looking for</h3>
+          <div className='box'>
+            {jobs?.map((item) => (
+              <InfoCard
+                key={nanoid()}
+                className='info-card--blue'
+                title={item.title}
+                text={item.text}
+              />
+            ))}
+          </div>
+        </div>
       </div>
 
       <SectionClients>

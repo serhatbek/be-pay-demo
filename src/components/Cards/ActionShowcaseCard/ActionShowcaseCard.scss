@@ -3,7 +3,7 @@
 .cta-card {
   h3 {
     color: c.$light-one;
-    font-size: clamp(23px, calc(1.4375rem + ((1vw - 4.2px) * 0.875)), 30px);
+    font-size: clamp(18px, calc(1.125rem + ((1vw - 4.2px) * 1.5)), 30px);
     line-height: clamp(30px, calc(1.875rem + ((1vw - 4.2px) * 1.25)), 40px);
     font-weight: 700;
     margin-bottom: 35px;

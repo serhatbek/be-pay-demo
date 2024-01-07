@@ -8,6 +8,7 @@ import client6 from '/images/Clients/client-6.png';
 import team1 from '/images/About/team-1.jpg';
 import team2 from '/images/About/team-2.jpg';
 import team3 from '/images/About/team-3.jpg';
+import about1 from '/images/About/about-1.png';
 
 const aboutItems = {
   pageTitleItems: {
@@ -69,6 +70,39 @@ const aboutItems = {
           link: '/be-pay-demo/',
         },
       ],
+    },
+  ],
+  sectionMiddleItems: {
+    showcaseCard: {
+      title: 'Aliquet sagittis id sit amet est placerat in egestas',
+      desc: 'Phasellus venenatis leo eu semper varius. Maecenas sit amet molestie leo. Morbi vitae urna mauris. Nulla nec tortor vitae eros iaculis hendrerit aliquet non urna. Nulla sit amet vestibulum magna, eget pulvinar libero.',
+    },
+    image: about1,
+  },
+  jobs: [
+    {
+      title: '01 —',
+      text: 'Senior Graphic designer',
+    },
+    {
+      title: '02 —',
+      text: 'Back-end developer',
+    },
+    {
+      title: '03 —',
+      text: 'Account Manager',
+    },
+    {
+      title: '04 —',
+      text: 'Project Manager',
+    },
+    {
+      title: '05 —',
+      text: 'Front-end developer',
+    },
+    {
+      title: '06 —',
+      text: 'Copywriter',
     },
   ],
   clientItems: [client1, client2, client3, client4, client5, client6],
