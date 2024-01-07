@@ -43,7 +43,7 @@ const Home = () => {
         ))}
       </SectionHero>
 
-      <section className='wrapper'>
+      <div className='wrapper'>
         <section className='section-reasons'>
           <div className='container'>
             <ActionShowcaseCard
@@ -81,7 +81,7 @@ const Home = () => {
             </Slide>
           ))}
         </SectionTestimonial>
-      </section>
+      </div>
 
       <SectionClients>
         {clientItems.map((item) => (

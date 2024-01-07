@@ -1,23 +1,65 @@
 import './About.scss';
 import aboutItems from '../../assets/data/about';
 import {
+  ActionShowcaseCard,
   Button,
   ClientItem,
   SectionBanner,
   SectionClients,
   SectionPageTitle,
+  TeamCard,
 } from '../../components';
 import { nanoid } from 'nanoid';
 import { Slide } from '../../components/Slider/Slider';
 
 const About = () => {
-  const { pageTitleItems, socialBannerItem, clientItems } = aboutItems;
+  const { pageTitleItems, ctaCard, teamCards, socialBannerItem, clientItems } =
+    aboutItems;
   return (
     <section className='section section-about section--bg'>
       <SectionPageTitle
         title={pageTitleItems.title}
         desc={pageTitleItems.desc}
       />
+
+      <div className='section-about__top'>
+        <div className='container'>
+          <ActionShowcaseCard
+            title={ctaCard.title}
+            desc={ctaCard.desc}
+            btnText={ctaCard.btnText}
+            btnLink={ctaCard.btnLink}
+            btnIcon={ctaCard.btnIcon}
+            btnClass='ant-btn--purple'
+          />
+          <div className='box'>
+            {teamCards?.map((item) => (
+              <TeamCard
+                image={item.image}
+                name={item.name}
+                job={item.job}
+                desc={item.desc}
+              >
+                {item.socialIcons?.map((item) => (
+                  <Button
+                    className='ant-btn--pink'
+                    type='link'
+                    href={item.link}
+                    iconLeft={item.icon}
+                  />
+                ))}
+              </TeamCard>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className='section-about__middle'>
+        <div className='container'></div>
+      </div>
+      <div className='section-about__bottom'>
+        <div className='container'></div>
+      </div>
 
       <SectionClients>
         {clientItems?.map((item) => (

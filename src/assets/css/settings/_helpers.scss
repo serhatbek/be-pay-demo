@@ -9,7 +9,7 @@
 
 .section {
   &.section--bg {
-    @include c.imageCacheBust('/images/Home/home_pay_sectionbg4.png');
+    @include c.imageCacheBust('/images/Home/home_pay_sectionbg2.png');
     background-repeat: no-repeat;
     background-position: center top;
   }
