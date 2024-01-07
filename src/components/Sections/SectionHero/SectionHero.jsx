@@ -1,4 +1,5 @@
 import './SectionHero.scss';
+import PropTypes from 'prop-types';
 
 const SectionHero = ({ title, desc, image, children }) => {
   return (
@@ -15,6 +16,13 @@ const SectionHero = ({ title, desc, image, children }) => {
       </div>
     </section>
   );
+};
+
+SectionHero.propTypes = {
+  image: PropTypes.string,
+  desc: PropTypes.string,
+  title: PropTypes.string,
+  children: PropTypes.any,
 };
 
 export default SectionHero;

@@ -1,4 +1,5 @@
 import './SectionTestimonial.scss';
+import PropTypes from 'prop-types';
 import Slider from '../../Slider/Slider';
 
 const SectionTestimonial = ({ children }) => {
@@ -24,6 +25,10 @@ const SectionTestimonial = ({ children }) => {
       </div>
     </section>
   );
+};
+
+SectionTestimonial.propTypes = {
+  children: PropTypes.any,
 };
 
 export default SectionTestimonial;

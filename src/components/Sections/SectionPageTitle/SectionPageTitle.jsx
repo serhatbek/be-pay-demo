@@ -1,4 +1,5 @@
 import './SectionPageTitle.scss';
+import PropTypes from 'prop-types';
 
 const SectionPageTitle = ({ title, desc }) => {
   return (
@@ -9,6 +10,11 @@ const SectionPageTitle = ({ title, desc }) => {
       </div>
     </section>
   );
+};
+
+SectionPageTitle.propTypes = {
+  desc: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default SectionPageTitle;
