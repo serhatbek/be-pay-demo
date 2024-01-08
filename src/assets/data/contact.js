@@ -6,6 +6,26 @@ import client5 from '/images/Clients/client-5.png';
 import client6 from '/images/Clients/client-6.png';
 
 const contactItems = {
+  detailItems: {
+    title: 'Do you have any questions?',
+    list: [
+      {
+        title: 'Address workshop',
+        desc: 'Level 13, 2 Elizabeth, Victoria 3000 Australia',
+        icon: 'address',
+      },
+      {
+        title: 'Call us',
+        desc: '+61 (0) 791 803 458',
+        icon: 'phone',
+      },
+      {
+        title: 'Write us',
+        desc: 'noreply@envato.com',
+        icon: 'mail',
+      },
+    ],
+  },
   pageTitleItems: {
     title: 'Contact us',
     desc: 'Vivamus in diam turpis. In condimentum maximus tristique. Maecenas non laoreet odio.',
