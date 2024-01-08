@@ -12,8 +12,13 @@ import {
 import { Slide } from '../../components/Slider/Slider';
 
 const Features = () => {
-  const { pageTitleItems, socialBannerItem, clientItems, detailItems } =
-    featuresItems;
+  const {
+    pageTitleItems,
+    socialBannerItem,
+    clientItems,
+    detailItems,
+    dashboardItems,
+  } = featuresItems;
   return (
     <section className='section section-features section--bg'>
       <SectionPageTitle
@@ -51,7 +56,25 @@ const Features = () => {
 
       <section className='section-features__bottom'>
         <div className='container'>
-          <div className='box'></div>
+          <div className='box'>
+            {dashboardItems?.map((item) => {
+              return (
+                <div key={nanoid()}>
+                  <figure>
+                    <img src={item.image} />
+                  </figure>
+                  <ActionShowcaseCard
+                    title={item.card.title}
+                    desc={item.card.desc}
+                    btnClass={item.card.btnClass}
+                    btnText={item.card.btnText}
+                    btnLink={item.card.btnLink}
+                    btnIcon={item.card.btnIcon}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 

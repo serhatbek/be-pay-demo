@@ -21,4 +21,56 @@
       text-align: center;
     }
   }
+
+  &__bottom {
+    .box {
+      > div {
+        display: flex;
+        align-items: center;
+
+        @include c.media(tablet) {
+          flex-direction: column;
+        }
+
+        > figure {
+          width: 50%;
+          margin: 0 20px;
+          @include c.media(tablet) {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 40px;
+          }
+        }
+
+        .cta-card {
+          width: 50%;
+          margin: 0 20px;
+          @include c.media(tablet) {
+            width: 100%;
+            margin: 0;
+          }
+        }
+      }
+
+      > div:not(:last-child) {
+        margin-bottom: 70px;
+      }
+
+      > div:nth-child(even) {
+        > figure {
+          order: 2;
+          @include c.media(tablet) {
+            order: 1;
+          }
+        }
+
+        .cta-card {
+          order: 1;
+          @include c.media(tablet) {
+            order: 2;
+          }
+        }
+      }
+    }
+  }
 }
