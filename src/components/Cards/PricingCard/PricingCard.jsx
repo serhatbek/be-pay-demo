@@ -2,6 +2,7 @@ import './PricingCard.scss';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Button from '../../Button/Button';
+import Icon from '../../Icon/Icon';
 
 const PricingCard = ({
   className,
@@ -16,7 +17,9 @@ const PricingCard = ({
     <div className={classNames('pricing-card', className)}>
       <div className='pricing-card__header'>
         <span className='pricing-card__header__title'>{title}</span>
-        {popular && <span className='pricing-card__header__popular'></span>}
+        {popular && (
+          <span className='pricing-card__header__popular'>{popular}</span>
+        )}
         <span className='pricing-card__header__price'>{price}</span>
         <span className='pricing-card__header__per'>{per}</span>
       </div>
@@ -29,7 +32,10 @@ const PricingCard = ({
         ))}
         <ul>
           {listItems?.map((item) => (
-            <li>{item}</li>
+            <li>
+              <Icon icon='check-circle' size='18' />
+              {item}
+            </li>
           ))}
         </ul>
         <Button

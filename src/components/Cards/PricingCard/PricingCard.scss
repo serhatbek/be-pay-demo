@@ -1,0 +1,98 @@
+@use '../../../assets/css/common.scss' as c;
+
+.pricing-card {
+  $self: &;
+  max-width: 406px;
+  width: 100%;
+  background-color: c.$blue-three;
+  padding: 50px 50px 35px;
+  color: c.$light-one;
+  border-radius: 30px;
+  text-align: center;
+
+  &__header {
+    border-bottom: 1px solid c.$blue-five;
+    padding-bottom: 40px;
+    > span {
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+    &__title {
+      font-size: clamp(18px, calc(1.125rem + ((1vw - 4.2px) * 1.25)), 28px);
+    }
+
+    &__price {
+      font-size: 48px;
+      color: c.$yellow-one;
+    }
+
+    &__per {
+      font-size: 13px;
+    }
+  }
+
+  &--light {
+    max-width: 370px;
+    @include c.imageCacheBust('/images/Home/home_pay_sectionbg3.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    top: -38px;
+    @include c.media(tablet-wide) {
+      position: static;
+      max-width: 406px;
+    }
+
+    #{$self}__header {
+      &__price {
+        color: c.$light-one;
+        font-size: 72px;
+      }
+    }
+  }
+
+  &__body {
+    padding-top: 40px;
+    font-size: 15px;
+
+    > p {
+      color: c.$purple-three;
+      margin-bottom: 15px;
+      @include c.media(tablet-wide) {
+        font-size: 13px;
+      }
+
+      > strong {
+        color: c.$light-one;
+        margin-right: 5px;
+      }
+    }
+
+    > ul {
+      margin-bottom: 15px;
+      color: c.$purple-three;
+
+      @include c.media(tablet-wide) {
+        font-size: 13px;
+      }
+
+      li {
+        .icon-check-circle {
+          margin-right: 5px;
+          color: c.$light-one;
+        }
+      }
+
+      li:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    .ant-btn {
+      margin-top: 15px;
+    }
+  }
+}

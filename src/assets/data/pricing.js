@@ -33,6 +33,7 @@ const pricingItems = {
       price: '$49.99',
       popular: 'Most popular',
       per: 'per month',
+      className: 'pricing-card--light',
       desc: [
         {
           strong: '100',
