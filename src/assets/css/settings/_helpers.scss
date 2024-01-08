@@ -32,6 +32,7 @@
   &__subtitle {
     color: c.$light-one;
     font-size: clamp(18px, calc(1.125rem + ((1vw - 4.2px) * 1.5)), 30px);
+    font-weight: 500;
   }
 }
 

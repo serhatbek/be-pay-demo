@@ -1,0 +1,22 @@
+@use '../../assets/css/common.scss' as c;
+
+.contact-info {
+  margin-bottom: 15px;
+  > h5 {
+    font-size: 18px;
+    color: c.$yellow-one;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  > p {
+    font-size: 14px;
+    color: c.$light-one;
+    font-weight: 300;
+
+    .icon {
+      color: c.$pink-one;
+      margin-right: 5px;
+    }
+  }
+}
