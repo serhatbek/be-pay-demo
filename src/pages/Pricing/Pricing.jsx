@@ -2,6 +2,7 @@ import './Pricing.scss';
 import { nanoid } from 'nanoid';
 import pricingItems from '../../assets/data/pricing';
 import {
+  ActionShowcaseCard,
   Button,
   ClientItem,
   SectionBanner,
@@ -11,13 +12,35 @@ import {
 import { Slide } from '../../components/Slider/Slider';
 
 const Pricing = () => {
-  const { pageTitleItems, socialBannerItem, clientItems } = pricingItems;
+  const { pageTitleItems, socialBannerItem, clientItems, cards } = pricingItems;
   return (
     <section className='section section-pricing section--bg'>
       <SectionPageTitle
         title={pageTitleItems.title}
         desc={pageTitleItems.desc}
       />
+
+      <section className='section-pricing__top'>
+        <div className='container'></div>
+      </section>
+
+      <section className='section-pricing__bottom'>
+        <div className='container'>
+          <div className='box'>
+            {cards?.map((item) => (
+              <ActionShowcaseCard
+                key={nanoid()}
+                title={item.title}
+                desc={item.desc}
+                btnClass={item.btnClass}
+                btnText={item.btnText}
+                btnLink={item.btnLink}
+                btnIcon={item.btnIcon}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
       <SectionClients>
         {clientItems?.map((item) => (

@@ -6,6 +6,24 @@ import client5 from '/images/Clients/client-5.png';
 import client6 from '/images/Clients/client-6.png';
 
 const pricingItems = {
+  cards: [
+    {
+      title: 'Learn a few reasons why Be Pay might be the right fit',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla porttitor. Eget nunc scelerisque viverra mauris in.',
+      btnText: 'Learn more',
+      btnIcon: 'arrow-circle',
+      btnClass: 'ant-btn--purple',
+      btnLink: '/be-pay-demo/',
+    },
+    {
+      title: 'Do you need more options from Be Pay? Contact us',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla porttitor. Eget nunc scelerisque viverra mauris in.',
+      btnText: 'Contact us',
+      btnIcon: 'arrow-circle',
+      btnClass: 'ant-btn--purple',
+      btnLink: '/be-pay-demo/contact',
+    },
+  ],
   pageTitleItems: {
     title: 'Pricing list',
     desc: 'Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.Curabitur et ligula.',

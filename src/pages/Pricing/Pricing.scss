@@ -1,2 +1,24 @@
+@use '../../assets/css/common.scss' as c;
+
 .section-pricing {
+  &__bottom {
+    .box {
+      display: flex;
+      justify-content: space-between;
+      @include c.media(tablet) {
+        flex-direction: column;
+      }
+
+      > div {
+        width: 45%;
+        @include c.media(tablet) {
+          width: 100%;
+
+          &:not(:last-child) {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
 }
