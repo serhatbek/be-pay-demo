@@ -1,9 +1,5 @@
-import {
-  RouterProvider,
-  createBrowserRouter,
-  createHashRouter,
-} from 'react-router-dom';
 import './assets/css/styles.scss';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import {
   About,
   Contact,

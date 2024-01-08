@@ -5,10 +5,41 @@ import client4 from '/images/Clients/client-4.png';
 import client5 from '/images/Clients/client-5.png';
 import client6 from '/images/Clients/client-6.png';
 
+import detailImg from '/images/Features/features-img-1.png';
+
 const featuresItems = {
   pageTitleItems: {
     title: 'Features',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris dolor, gravida a varius blandit, auctor eget purus.',
+  },
+  detailItems: {
+    image: detailImg,
+    detailCards: [
+      {
+        title: 'Accounts balance',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor inci didunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla porttitor.',
+      },
+      {
+        title: 'Balance account statistics',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor inci didunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla porttitor.',
+      },
+      {
+        title: 'Activities',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor inci didunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla porttitor.',
+      },
+      {
+        title: 'Advanced seach',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor inci didunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla porttitor.',
+      },
+      {
+        title: 'Expenditure statistics',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor inci didunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla porttitor.',
+      },
+      {
+        title: 'Cards settings',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor inci didunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla porttitor.',
+      },
+    ],
   },
   clientItems: [client1, client2, client3, client4, client5, client6],
   socialBannerItem: {
