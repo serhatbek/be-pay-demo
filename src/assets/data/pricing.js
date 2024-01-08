@@ -6,6 +6,72 @@ import client5 from '/images/Clients/client-5.png';
 import client6 from '/images/Clients/client-6.png';
 
 const pricingItems = {
+  pricingCards: [
+    {
+      title: 'Basic',
+      price: '$19.99',
+      per: 'per month',
+      desc: [
+        {
+          strong: '10',
+          text: 'lorem ipsum dolor',
+        },
+        {
+          strong: '1',
+          text: 'Suspendisse a pellentesque dui',
+        },
+      ],
+      listItems: [
+        'Maecenas malesuada elit lectus felis',
+        ' Malesuada ultricies',
+        'Nulla imperdiet sit amet magna',
+        'Vestibulum dapibus, mauris nec',
+      ],
+    },
+    {
+      title: 'Standard',
+      price: '$49.99',
+      popular: 'Most popular',
+      per: 'per month',
+      desc: [
+        {
+          strong: '100',
+          text: 'lorem ipsum dolor',
+        },
+        {
+          strong: '10',
+          text: 'Suspendisse a pellentesque dui',
+        },
+      ],
+      listItems: [
+        'Maecenas malesuada elit lectus felis',
+        ' Malesuada ultricies',
+        'Nulla imperdiet sit amet magna',
+        'Vestibulum dapibus, mauris nec',
+      ],
+    },
+    {
+      title: 'Professional',
+      price: '$99.99',
+      per: 'per month',
+      desc: [
+        {
+          strong: 'Unlimited',
+          text: 'lorem ipsum dolor',
+        },
+        {
+          strong: 'Unlimited',
+          text: 'Suspendisse a pellentesque dui',
+        },
+      ],
+      listItems: [
+        'Maecenas malesuada elit lectus felis',
+        ' Malesuada ultricies',
+        'Nulla imperdiet sit amet magna',
+        'Vestibulum dapibus, mauris nec',
+      ],
+    },
+  ],
   cards: [
     {
       title: 'Learn a few reasons why Be Pay might be the right fit',
