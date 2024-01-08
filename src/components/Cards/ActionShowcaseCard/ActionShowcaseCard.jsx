@@ -1,7 +1,7 @@
-import Button from '../../Button/Button';
 import './ActionShowcaseCard.scss';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Button from '../../Button/Button';
 
 const ActionShowcaseCard = ({
   title,

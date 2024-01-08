@@ -17,13 +17,13 @@ export const homeItems = {
     img: payImg,
     buttons: [
       {
-        href: '/',
+        href: '/be-pay-demo/',
         text: 'Try for free',
         class: 'ant-btn--pink',
         icon: 'arrow-circle',
       },
       {
-        href: '/',
+        href: '/be-pay-demo/',
         text: 'Watch video',
         class: 'ant-btn--purple',
         icon: 'watch',
@@ -35,7 +35,7 @@ export const homeItems = {
     title: 'A few reasons why Be Pay might be the right fit',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla porttitor. Eget nunc scelerisque viverra mauris in. Venenatis cras sed felis eget velit aliquet sagittis id. Sit amet est placerat in egestas. Mauris rhoncus orci.',
     btnText: 'Learn more',
-    btnLink: '/',
+    btnLink: '/be-pay-demo/',
     btnIcon: 'hor-lines',
   },
   infoItems: [
