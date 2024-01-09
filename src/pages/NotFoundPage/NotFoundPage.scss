@@ -1,4 +1,9 @@
+@use '../../assets/css/common.scss' as c;
+
 .section-error {
+  @include c.imageCacheBust('/images/Home/home_pay_sectionbg3.png');
+  background-repeat: no-repeat;
+  background-position: center;
   .container {
     display: flex;
     align-items: center;

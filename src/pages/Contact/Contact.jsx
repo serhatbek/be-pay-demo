@@ -5,11 +5,14 @@ import {
   Button,
   ClientItem,
   ContactInfoItem,
+  Input,
   SectionBanner,
   SectionClients,
   SectionPageTitle,
 } from '../../components';
 import { Slide } from '../../components/Slider/Slider';
+import { FloatButton, Form } from 'antd';
+import TextArea from 'antd/es/input/TextArea';
 
 const Contact = () => {
   const { pageTitleItems, socialBannerItem, clientItems, detailItems } =
@@ -35,6 +38,33 @@ const Contact = () => {
                 />
               ))}
             </div>
+          </div>
+          <div className='section-contact__details__right'>
+            <Form>
+              <Form.Item
+                rules={[{ required: true, message: 'Please enter your name' }]}
+              >
+                <Input placeholder='Name' />
+              </Form.Item>
+
+              <Form.Item>
+                <Input placeholder='Email' />
+              </Form.Item>
+
+              <Form.Item>
+                <Input placeholder='Subject' />
+              </Form.Item>
+
+              <Form.Item>
+                <TextArea className='text-area' />
+              </Form.Item>
+
+              <Form.Item wrapperCol={{ span: 24 }}>
+                <Button block type='submit' className='ant-btn--purple'>
+                  Submit
+                </Button>
+              </Form.Item>
+            </Form>
           </div>
         </div>
       </section>
