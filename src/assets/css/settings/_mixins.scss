@@ -5,7 +5,7 @@ $ver: unique_id();
   background-image: #{'url("'}#{$url}#{'?v='}#{$ver}#{'")'};
 }
 
-// for multiple bg images / need to be adjusted accordingly
+// for multiple bg images / should to be adjusted accordingly
 @mixin imageCacheBusts($url1, $url2) {
   background-image: #{'url("'}#{$url1}#{'?v='}#{$ver}#{'")'},
     #{'url("'}#{$url2}#{'?v='}#{$ver}#{'")'};

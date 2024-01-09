@@ -26,6 +26,6 @@ export const headerItems = {
   ],
   btn: {
     text: 'Buy Now',
-    link: '/be-pay-demo/buy',
+    link: '/be-pay-demo/pricing',
   },
 };

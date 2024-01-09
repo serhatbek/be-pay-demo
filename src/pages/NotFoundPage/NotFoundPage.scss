@@ -1,0 +1,13 @@
+.section-error {
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    .section__desc {
+      font-size: 40px;
+      margin: 20px 0;
+    }
+  }
+}
