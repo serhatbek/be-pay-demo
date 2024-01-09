@@ -11,12 +11,17 @@ import {
   SectionPageTitle,
 } from '../../components';
 import { Slide } from '../../components/Slider/Slider';
-import { FloatButton, Form } from 'antd';
+import { Button as AntButton, Input as AntInput, Form } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 
 const Contact = () => {
   const { pageTitleItems, socialBannerItem, clientItems, detailItems } =
     contactItems;
+
+  const onFinish = (values) => {
+    console.log('Success:', values);
+  };
+
   return (
     <section className='section section-contact section--bg'>
       <SectionPageTitle
@@ -40,27 +45,52 @@ const Contact = () => {
             </div>
           </div>
           <div className='section-contact__details__right'>
-            <Form>
+            <Form autoComplete='off' onFinish={onFinish}>
               <Form.Item
-                rules={[{ required: true, message: 'Please enter your name' }]}
+                name={'name'}
+                validateTrigger='onSubmit'
+                rules={[
+                  { required: true, message: 'Please enter your name' },
+                  { whitespace: true },
+                  { min: 7, message: 'Must be minimum 7 characters' },
+                ]}
               >
                 <Input placeholder='Name' />
               </Form.Item>
 
-              <Form.Item>
+              <Form.Item
+                name={'email'}
+                validateTrigger='onSubmit'
+                rules={[
+                  { required: true, message: 'Please enter your email' },
+                  { type: 'email', message: 'Please enter a valid email' },
+                ]}
+              >
                 <Input placeholder='Email' />
               </Form.Item>
 
-              <Form.Item>
+              <Form.Item
+                name={'subject'}
+                rules={[
+                  { required: true, message: 'Please enter a subject' },
+                  { whitespace: true },
+                ]}
+              >
                 <Input placeholder='Subject' />
               </Form.Item>
 
-              <Form.Item>
+              <Form.Item
+                name={'detail'}
+                rules={[
+                  { required: true, message: 'Please enter a message' },
+                  { max: 500, message: 'Maximum 500 characters.' },
+                ]}
+              >
                 <TextArea className='text-area' />
               </Form.Item>
 
               <Form.Item wrapperCol={{ span: 24 }}>
-                <Button block type='submit' className='ant-btn--purple'>
+                <Button block htmlType='submit' className='ant-btn--purple'>
                   Submit
                 </Button>
               </Form.Item>

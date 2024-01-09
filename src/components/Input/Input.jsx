@@ -6,18 +6,19 @@ import FloatLabel from '../FloatLabel/FloatLabel';
 import { useState } from 'react';
 
 const Input = ({ value, placeholder, className, ...props }) => {
-  const [inputVal, setInputVal] = useState('');
+  //   const [inputVal, setInputVal] = useState('');
 
   const handleChange = (e) => setInputVal(e.target.value);
   return (
     <FloatLabel
       label={placeholder}
-      value={inputVal}
+      value={value}
       className={classNames(className)}
     >
       <AntdInput
-        onChange={handleChange}
-        value={inputVal}
+        name={placeholder}
+        // onChange={handleChange}
+        value={value}
         {...props}
       ></AntdInput>
     </FloatLabel>

@@ -3,6 +3,10 @@
 .section-contact {
   $self: &;
   &__details {
+    padding: 100px 0;
+    @include c.media(tablet-wide) {
+      padding-bottom: 30px;
+    }
     .container {
       display: flex;
       justify-content: space-between;
