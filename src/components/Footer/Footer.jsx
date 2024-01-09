@@ -20,7 +20,8 @@ const Footer = () => {
       <div className='container'>
         <div className='footer__copyright'>
           <div>
-            <span>Betheme by</span>
+            {new Date().getFullYear()}
+            <span> Betheme by</span>
             <Link target='_blank' to={muffin.url}>
               {muffin.text}
             </Link>
