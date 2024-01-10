@@ -51,7 +51,7 @@ const Header = () => {
           </ul>
           <Button
             type='link'
-            href='/'
+            href={btn.link}
             className='ant-btn--blue header__action'
             iconRight='cart'
           >
