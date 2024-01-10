@@ -23,6 +23,7 @@ const Home = () => {
     clientItems,
     socialBannerItem,
   } = homeItems;
+
   return (
     <section className='section section-home'>
       <SectionHero
