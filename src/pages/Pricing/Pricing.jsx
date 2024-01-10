@@ -27,6 +27,7 @@ const Pricing = () => {
           <div className='box'>
             {pricingCards?.map((item) => (
               <PricingCard
+                key={nanoid()}
                 className={item.className}
                 title={item.title}
                 price={item.price}

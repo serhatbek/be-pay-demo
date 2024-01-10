@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Button from '../../Button/Button';
 import Icon from '../../Icon/Icon';
+import { nanoid } from 'nanoid';
 
 const PricingCard = ({
   className,
@@ -25,14 +26,14 @@ const PricingCard = ({
       </div>
       <div className='pricing-card__body'>
         {desc?.map((item) => (
-          <p>
+          <p key={nanoid()}>
             <strong>{item.strong}</strong>
             {item.text}
           </p>
         ))}
         <ul>
           {listItems?.map((item) => (
-            <li>
+            <li key={nanoid()}>
               <Icon icon='check-circle' size='18' />
               {item}
             </li>
@@ -54,7 +55,7 @@ const PricingCard = ({
 PricingCard.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
-  desc: PropTypes.string,
+  desc: PropTypes.array,
   price: PropTypes.string,
   per: PropTypes.string,
   popular: PropTypes.string,

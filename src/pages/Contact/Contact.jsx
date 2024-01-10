@@ -11,7 +11,7 @@ import {
   SectionPageTitle,
 } from '../../components';
 import { Slide } from '../../components/Slider/Slider';
-import { Button as AntButton, Input as AntInput, Form } from 'antd';
+import { Form } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 
 const Contact = () => {
