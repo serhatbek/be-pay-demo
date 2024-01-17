@@ -8,21 +8,7 @@ import 'swiper/css/pagination';
 
 const Slider = ({ children, ...props }) => {
   return (
-    <Swiper
-      {...props}
-      //   className='testimonial-slider'
-      modules={[Navigation, Pagination, Autoplay]}
-      //   loop={true}
-      //   slidesPerView={1}
-      //   autoplay={{
-      //     delay: 2000,
-      //     disableOnInteraction: false,
-      //   }}
-      //   pagination={{
-      //     el: '.testimonial-slider__pagination-div',
-      //     clickable: true,
-      //   }}
-    >
+    <Swiper {...props} modules={[Navigation, Pagination, Autoplay]}>
       {children}
     </Swiper>
   );
