@@ -7,7 +7,7 @@ export { default as Slider } from './Slider/Slider';
 export { default as ClientItem } from './ClientItem/ClientItem';
 export { default as ContactInfoItem } from './ContactInfoItem/ContactInfoItem';
 export { default as LoadingSpinner } from './LoadingSpinner/LoadingSpinner';
+export { default as Modal } from './Modal/Modal';
 
-export * from './Modals';
 export * from './Cards';
 export * from './Sections';

@@ -5,7 +5,6 @@ import {
   Button,
   ClientItem,
   ContactInfoItem,
-  FormSubmitModal,
   Input,
   SectionBanner,
   SectionClients,
@@ -14,13 +13,17 @@ import {
 import { Slide } from '../../components/Slider/Slider';
 import { Form } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
+import { useDispatch } from 'react-redux';
+import { openModal } from '../../redux/Modal/modalSlice';
 
 const Contact = () => {
   const { pageTitleItems, socialBannerItem, clientItems, detailItems } =
     contactItems;
+  const dispatch = useDispatch();
 
   const onFinish = (values) => {
-    console.log('Success:', values);
+    // console.log('Success:', values);
+    dispatch(openModal('form-submit-modal'));
   };
 
   return (
@@ -107,10 +110,6 @@ const Contact = () => {
           </Slide>
         ))}
       </SectionClients>
-
-      <section>
-        <FormSubmitModal />
-      </section>
 
       <SectionBanner
         title={socialBannerItem.title}
