@@ -1,8 +1,8 @@
 import './Header.scss';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { headerItems } from '../../assets/data/header';
 import { nanoid } from 'nanoid';
-import { Button, Icon } from '../../components';
+import { Icon } from '../../components';
 import { useRef, useState } from 'react';
 import classNames from 'classnames';
 import handleClickOutside from '../../utils/handleClickOutside';
@@ -49,14 +49,10 @@ const Header = () => {
               );
             })}
           </ul>
-          <Button
-            type='link'
-            href={btn.link}
-            className='ant-btn--blue header__action'
-            iconRight='cart'
-          >
+          <Link to={btn.link} className='ant-btn ant-btn--blue header__action'>
             {btn.text}
-          </Button>
+            <Icon icon='cart' />
+          </Link>
           <div className='bg-overlay'></div>
         </nav>
       </div>
