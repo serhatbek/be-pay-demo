@@ -1,0 +1,43 @@
+@use '../../../assets/css/common.scss' as c;
+
+.form-submit-modal {
+  &__content {
+    margin-bottom: 10px;
+    > .icon {
+      color: c.$blue-four;
+      display: block;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      color: c.$brown-one;
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: c.$brown-one;
+      font-weight: 500;
+    }
+  }
+
+  &__action {
+    text-align: center;
+    .close-btn {
+      color: c.$red-one;
+      padding: 0;
+      box-shadow: none;
+
+      &:hover {
+        color: c.$red-one !important;
+      }
+
+      .icon {
+        font-size: 38px;
+      }
+    }
+  }
+}

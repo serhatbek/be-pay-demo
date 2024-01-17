@@ -8,5 +8,6 @@ export { default as ClientItem } from './ClientItem/ClientItem';
 export { default as ContactInfoItem } from './ContactInfoItem/ContactInfoItem';
 export { default as LoadingSpinner } from './LoadingSpinner/LoadingSpinner';
 
+export * from './Modals';
 export * from './Cards';
 export * from './Sections';

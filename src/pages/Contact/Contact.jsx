@@ -5,6 +5,7 @@ import {
   Button,
   ClientItem,
   ContactInfoItem,
+  FormSubmitModal,
   Input,
   SectionBanner,
   SectionClients,
@@ -106,6 +107,10 @@ const Contact = () => {
           </Slide>
         ))}
       </SectionClients>
+
+      <section>
+        <FormSubmitModal />
+      </section>
 
       <SectionBanner
         title={socialBannerItem.title}
