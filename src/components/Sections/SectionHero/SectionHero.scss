@@ -1,7 +1,7 @@
 @use '../../../assets/css/common.scss' as c;
 
 .section-hero {
-  @include c.imageCacheBusts(
+  @include c.imageCacheBust(
     '/images/Home/home_pay_sectionbg1.png',
     '/images/Home/home_pay_sectionbg2.png'
   );
