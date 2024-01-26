@@ -1,4 +1,4 @@
-$ver: unique_id();
+$verId: unique_id();
 
 @mixin imageCacheBust($urls...) {
   $backgroundImages: ();
@@ -6,7 +6,7 @@ $ver: unique_id();
   @each $url in $urls {
     $backgroundImages: append(
       $backgroundImages,
-      url('#{$url}?v=#{$ver}'),
+      url('#{$url}?v=#{$verId}'),
       comma
     );
   }

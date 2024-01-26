@@ -4,10 +4,13 @@ import { closeModal } from '../../../redux/Modal/modalSlice';
 import { useDispatch } from 'react-redux';
 import { useRef } from 'react';
 import handleClickOutside from '../../../utils/handleClickOutside';
+import { useWindowSize } from 'react-use';
+import Confetti from 'react-confetti';
 
 const FormSubmitModal = () => {
   const dispatch = useDispatch();
   const modalRef = useRef(null);
+  const { width, height } = useWindowSize();
 
   const handleModalClose = () => {
     dispatch(closeModal());
@@ -31,6 +34,7 @@ const FormSubmitModal = () => {
           />
         </div>
       </div>
+      <Confetti width={width} height={height} tweenDuration={100} />
     </div>
   );
 };
