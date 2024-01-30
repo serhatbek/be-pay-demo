@@ -10,10 +10,10 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "icon": "node src/tasks/iconFont.js",
     "watch": "node src/tasks/watch.js",
-    "preview": "vite preview",
     "predeploy": "vite build",
     "deploy": "gh-pages -d dist",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
